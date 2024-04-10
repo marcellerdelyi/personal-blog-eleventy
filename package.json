@@ -1,0 +1,16 @@
+{
+  "name": "eleventry-personal",
+  "version": "1.0.0",
+  "description": "A repository for a blog web site using the Eleventy site generator.",
+  "main": "index.js",
+  "scripts": {
+    "start": "eleventy --serve",
+    "build": "eleventy"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@11ty/eleventy": "^2.0.1"
+  }
+}

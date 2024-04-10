@@ -1,0 +1,8 @@
+_site/
+node_modules/
+package-lock.json
+.cache
+
+# environment variables
+.env
+.env.production
