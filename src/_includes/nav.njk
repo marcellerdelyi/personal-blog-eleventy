@@ -1,0 +1,14 @@
+   <header>
+      <nav>
+        <ul role="list" class="nav-list">
+          <li>
+            <a {% if currentUrl === '/' %}aria-current="page"{% endif %} href="/">Home</a>
+          </li>
+          <li>
+            <a {% if currentUrl === blog.url %}aria-current="page"{% endif %} href="/">Blog</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+     
