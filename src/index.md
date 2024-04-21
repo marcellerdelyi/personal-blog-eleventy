@@ -7,8 +7,7 @@ layout: base.njk
 
 This is a markdown text
 
-{% for page in collections.pages %}
-- [{{ page.data.title }}]({{ page.url }})
-{%- endfor %}
 
-This is more markdown text.
+{% for post in collections.post %}
+- [{{ post.data.title }}]({{ post.url }})
+{%- endfor %}

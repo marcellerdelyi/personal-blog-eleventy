@@ -1,14 +1,21 @@
-/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
-ul:where([role="list"]),
-ol:where([role="list"]) {
-  list-style: none;
-  margin: 0;
-  padding: 0;
+@import url('./reset.css');
+
+/* //////////////////////
+  DEFAULTS
+  /////////////////////// */
+:root {
+  --ff: "Inter", sans-serif;
 }
 
-body {
-  font-family: sans-serif;
-}
+/* //////////////////////
+  General styling
+  /////////////////////// */
+
+  body {
+    font-family: var(--ff);
+    font-size: var(--fs-400);
+    background-color: #f9f9f9;
+  }
 
 /* //////////////////////
   Utility Classes
