@@ -1,12 +1,13 @@
 module.exports = function (eleventyConfig) {
-
+  // Add Passthrough Copy for CSS files
   eleventyConfig.addPassthroughCopy("./src/css");
   eleventyConfig.addWatchTarget("./src/css");
 
-    return {
+  // Return Eleventy configuration options
+  return {
       dir: {
-        input: "src",
-        output: "public",
+          input: "src",
+          output: "public",
       },
-    };
   };
+};

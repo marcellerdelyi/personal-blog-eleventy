@@ -8,6 +8,8 @@ layout: base.njk
 This is a markdown text
 
 
+
 {% for post in collections.post %}
-- [{{ post.data.title }}]({{ post.url }})
+  ## [{{ post.data.title }}]({{ post.url }})
+ {{ post.data.description }}
 {%- endfor %}
