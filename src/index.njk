@@ -1,0 +1,19 @@
+---
+title: Personal website
+layout: base.njk
+---
+
+
+<section>
+    <h2> Latest Posts</h2>
+    <p>This is a some text</p>
+</section>
+
+<ul>
+    {% for post in collections.post %}
+    <li>
+      <a href="{{ post.url }}">{{ post.data.title }}</a><br />
+      <small class="post-meta"><time>{{ post.data.date }}</time></small>
+    </li>
+    {% endfor %}
+</ul>
