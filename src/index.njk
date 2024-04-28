@@ -13,7 +13,10 @@ layout: base.njk
     {% for post in collections.post %}
     <li>
       <a href="{{ post.url }}">{{ post.data.title }}</a><br />
-      <small class="post-meta"><time>{{ post.data.date }}</time></small>
+      <small class="post-meta"><time>{{ post.data.date | postDate }}</time></small>
     </li>
     {% endfor %}
 </ul>
+
+
+{# readup: https://simpixelated.com/ #}

@@ -5,7 +5,7 @@
             <a {% if currentUrl === '/' %}aria-current="page"{% endif %} href="/">Home</a>
           </li>
           <li>
-            <a {% if currentUrl === blog.url %}aria-current="page"{% endif %} href="/">Blog</a>
+            <a {% if page.url === '/about/' %} aria-current="page"{% endif %} href="/about">About</a>
           </li>
         </ul>
       </nav>
