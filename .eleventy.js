@@ -1,10 +1,13 @@
 // imports
 
 const { DateTime } = require("luxon");
+const pluginSyntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 
 module.exports = function (eleventyConfig) {
   // Add Passthrough Copy for CSS files
   eleventyConfig.addPassthroughCopy("./src/css");
+
+  // Watch Target for CSS directory
   eleventyConfig.addWatchTarget("./src/css");
 
   // FILTERS - Modify data in template files at build time
@@ -12,9 +15,11 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addFilter("postDate", (dateObj) => {
     return DateTime.fromJSDate(dateObj).toLocaleString(DateTime.DATE_MED);
   });
-  
 
-  // Return Eleventy configuration options
+  // Syntax Highlighting Plugin
+  eleventyConfig.addPlugin(pluginSyntaxHighlight);
+  
+ 
   return {
       dir: {
           input: "src",
