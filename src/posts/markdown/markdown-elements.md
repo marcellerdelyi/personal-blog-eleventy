@@ -130,6 +130,8 @@ function demo() {
 
 [Expressive Code](https://expressive-code.com/) can do a ton more than shown here, and includes a lot of [customisation](https://expressive-code.com/reference/configuration/).
 
+{% image "./BasicCube_1920x1080.png", "Blender basic cube" %}
+
 ## Tables
 
 | Option | Description                                                               |
