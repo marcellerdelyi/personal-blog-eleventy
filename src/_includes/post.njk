@@ -1,6 +1,12 @@
 ---
 layout: base.njk
 ---
+<h1>{{ title }}</h1>
+
+<ul>
+	<li><time class="post-meta">{{ page.date| postDate }}</time></li>
+</ul>
+
 
 {{ content | safe }}
 
