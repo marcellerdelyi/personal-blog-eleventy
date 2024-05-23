@@ -1,5 +1,4 @@
 # build artifacts
-public
 _site/
 
 # dependencies installed by npm
