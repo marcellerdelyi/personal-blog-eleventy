@@ -1,9 +1,11 @@
 @import url('./reset.css');
 
 /* Defaults */
-
 :root {
-  --ff: "Inter", sans-serif;
+  --font-family: "Inter", sans-serif;
+  background-color: #f9f9f9;
+  --max-width: 70ch;
+  --layout-spacing: max(8vh, 3rem);
 }
 
 /* Layout */
@@ -13,16 +15,14 @@
     flex-direction: column;
     min-height: 100vh;
     padding: 5vh clamp(1rem, 5vw, 3rem) 1rem;
-    font-family: var(--ff);
-    background-color: #f9f9f9;
+    font-family: var(--font-family);
   }
 
   body > * {
-    --layout-spacing: max(8vh, 3rem);
-    --max-width: 70ch;
     width: min(100%, var(--max-width));
     margin-left: auto;
     margin-right: auto;
+    margin-top: var(--layout-spacing);
   }
 
   header,
@@ -43,7 +43,7 @@
     color: #767676;
   }
 
-  article * + * {
+  main * + * {
     margin-top: 1em;
   }
 
@@ -51,14 +51,23 @@
 
 :is(h1, h2, h3) {
   line-height: 1.2;
-}
-
-:is(h1, h2,) {
   max-width: 40ch;
 }
 
 :is(h2, h3,):not(:first-child) {
   margin-top: 2em;
+}
+
+/* Applies disc bullets to unordered lists */
+article ul {
+  list-style-type: disc;
+  margin-left: 1.5rem;
+}
+
+/* Applies decimal numbering to ordered lists */
+article ol {
+  list-style-type: decimal; 
+  margin-left: 1.5rem;
 }
 
 /* Nav */
@@ -83,7 +92,7 @@
 
 /* Media */
 
-article img {
+main img {
   display: block;
   width: 100%;
   min-height: 20rem;

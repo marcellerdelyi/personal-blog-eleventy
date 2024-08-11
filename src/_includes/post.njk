@@ -7,8 +7,4 @@ layout: base.njk
 	<li><time class="post-meta">{{ page.date| postDate }}</time></li>
 </ul>
 
-{{ content | safe }}
-
-<footer>
-    <p>Published on: {{ page.date.toDateString() }}</p>
-</footer>
+<article>{{ content | safe }}</article>
