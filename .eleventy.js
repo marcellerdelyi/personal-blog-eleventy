@@ -37,6 +37,7 @@ module.exports = function (eleventyConfig) {
           output: "_site",
           data: "_data",     
       },
+      markdownTemplateEngine: "njk"
   };
 };
 
