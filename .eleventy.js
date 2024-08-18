@@ -1,9 +1,8 @@
-// imports
-
 const { DateTime } = require("luxon");
 const pluginSyntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 
 const pluginImages = require("./eleventy.config.images.js");
+const { config } = require("dotenv");
 
 module.exports = function (eleventyConfig) {
   // Add Passthrough Copy for CSS files
@@ -28,16 +27,18 @@ module.exports = function (eleventyConfig) {
 
   eleventyConfig.addPlugin(pluginImages);
 
-  
-  
- 
   return {
+	 // Control which files Eleventy will process
+   templateFormats: ["md", "njk", "html", "liquid"],
+
+    markdownTemplateEngine: "njk",
+    dataTemplateEngine: "njk",
+    htmlTemplateEngine: "njk",
+
       dir: {
           input: "src",
           output: "_site",
           data: "_data",     
       },
-      markdownTemplateEngine: "njk"
   };
 };
-
