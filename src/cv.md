@@ -13,7 +13,6 @@ layout: base.njk
 ## Work Experience
 ---
 
-
 **Visualization Engineer at AkerSolutions**  
 _Verdal, Trøndelag, Norway_  
 Jun 2021 – Present
@@ -41,6 +40,7 @@ Apr 2019 – Jul 2019
 _Steinkjer, Trøndelag, Norway_  
 Aug 2018 – Jun 2021
 <li>Bachelor's Degree in 3D Art, Animation & VFX</li>
+<li>BSc thesis: "Procedural animation of an industrial robot",  combined research and real-world testing conducted during an internship at Aker Solutions. The project developed and proposed a workflow for creating a fully procedural animated robotic arm for virtual industrial environments.</li>
 
 **Mesharray Digital Media School**  
 _Budapest, Hungary_  
