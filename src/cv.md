@@ -1,5 +1,5 @@
 ---
-title: Marcell Laszlo Erdelyi
+title: Marcell Erdelyi
 layout: base.njk
 ---
 
