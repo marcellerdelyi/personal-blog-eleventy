@@ -18,10 +18,10 @@ _Verdal, Trøndelag, Norway_
 Jun 2021 – Present
 
   <li>Specialize in animation for offshore assembly visualizations using Blender and Unreal Engine </li>
-  <li>Assisted the internal team in setting up a collaborative environment with version control using Perforce, including setting up test servers on both Linux and Windows, and later deploying the production server with additional tools and documentation</li>
+  <li>Assisted the internal team in setting up a collaborative environment with version control using Perforce, including setting up test servers on both Linux and Windows, and later deploying the production server with additional tools</li>
   <li>Collaborated with internal team to write technical documentation of work processes</li>
   <li>Developed a script to automate the display of text data and animation in After Effects from a CSV file exported from Excel</li>
-  <li>Worked with internal engineering department to prepare CAD models for fabrication using AutoCad, Navisworks, internal tools, drawings and schematics</li>
+  <li>Worked with internal engineering department to prepare CAD models for fabrication using AutoCad and Navisworks</li>
 
 **Nord University**  
 _Levanger, Trøndelag, Norway_  
@@ -62,6 +62,13 @@ Sep 2019 – Jul 2020
 **Social Welfare Secretary (ISU Steinkjer)**  
 _Steinkjer, Trøndelag, Norway_  
 Aug 2018 – Aug 2019
+
+## Side Projects
+---
+
+- **personal website**
+
+<p><a href="https://github.com/marcellerdelyi/personal-blog-eleventy">personal-blog-eleventy.pages.dev</a><p\>
 
 ## Language
 ---
