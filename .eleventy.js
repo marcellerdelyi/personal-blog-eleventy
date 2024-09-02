@@ -21,7 +21,11 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addFilter("postDate", (dateObj) => {
     return DateTime.fromJSDate(dateObj).toLocaleString(DateTime.DATE_MED);
   });
-
+  eleventyConfig.addCollection("recentPosts", function(collectionApi) {
+    return collectionApi.getFilteredByGlob("./src/posts/**/*.md").reverse().slice(0, 3);
+  });
+  
+  
   // Syntax Highlighting Plugin
   eleventyConfig.addPlugin(pluginSyntaxHighlight);
 

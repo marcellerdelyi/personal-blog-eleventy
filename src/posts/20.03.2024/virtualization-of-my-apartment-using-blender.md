@@ -12,10 +12,10 @@ To start, I needed a few essential tools. First, I required a way to measure the
 
 A collegue recommended using Scaniverse, a 3D scanning application available for Iphone and Ipad users. This app can perform 3D scans with enough accuracy for my project. Although I don't own either of these devices, I was fortunate to have access to an iPad that I could borrow for scanning.
 
-For designing the floor plan and visualizing tne model, I chose Blender. Blender is an open-source software primarly used for creating 3D models, anmimations, simulations, rendering and more. I selected Blender because it's a tool I'm most familiar with. Additionally, Blender has an addon called Bonsai formerly known as BlenderBim, an open-source Building Information Modeling (BIM) tool widely used in construction and architecture.
+For designing the floor plan and visualizing the model, I chose Blender. Blender is an open-source software primarly used for creating 3D models, anmimations, simulations, rendering and more. I selected Blender because it's a tool I'm most familiar with. Additionally, Blender has an addon called Bonsai formerly known as BlenderBim, an open-source Building Information Modeling (BIM) tool mainly used in construction and architecture.
 Bonsai offers features that make creating floor plans relatively straightforward. Unlike typical 3D models, BIM data doesn’t require geometry, which could be a limitation for this project, but I guess I'll find out as I progress.
 
-If necessary, I may explore alternative open-source options like FreeCAD or LibreCAD, though I have limited experience with these tools.
+If time allows it, I may explore alternative open-source options like FreeCAD or LibreCAD.
 
 # What's next?
 
