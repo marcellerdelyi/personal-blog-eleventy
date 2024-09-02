@@ -4,20 +4,17 @@ layout: base.njk
 ---
 
 <h1> Hei, I'm Marcell! 👋</h1>
-<p>I'm a Budapest born hungarian, now living in the heart of Norway. I currently work as a visualization engineer at <a href="https://www.akersolutions.com/">AkerSolutions</a>.
-I'm a nerd with many hobbies and interests. This website is my latest personal project where I share a bit about myself.</p>
+<p>I'm a Budapest born hungarian, now living in the heart of Norway. I currently work as a visualization engineer at <a href="https://www.akersolutions.com/">AkerSolutions</a>.</p>
+<p>I'm a nerd with many hobbies and interests. This website is my latest personal project where I share a bit about myself.</p>
 
 <h2> Latest Posts</h2>
 <hr>
 
 <ul>
-    {% for post in collections.post %}
+    {% for post in collections.post | reverse %}
     <li>
       <a href="{{ post.url }}">{{ post.data.title }}</a><br />
       <small class="post-meta"><time>{{ post.data.date | postDate }}</time></small>
     </li>
     {% endfor %}
 </ul>
-
-
-{# readup: https://simpixelated.com/ #}
