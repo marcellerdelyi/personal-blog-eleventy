@@ -26,7 +26,6 @@ body > * {
   margin-top: var(--layout-spacing);
 }
 
-header,
 main,
 main > * + * {
   margin-top: var(--layout-spacing);
