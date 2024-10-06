@@ -13,7 +13,7 @@ layout: base.njk
 ## Work Experience
 ---
 
-**Visualization Engineer at AkerSolutions**  
+**AkerSolutions - Visualization Engineer**  
 _Verdal, Trøndelag, Norway_  
 Jun 2021 – Present
 
@@ -23,12 +23,12 @@ Jun 2021 – Present
   <li>Developed a script to automate the display of text data and animation in After Effects from a CSV file exported from Excel</li>
   <li>Worked with internal engineering department to prepare CAD models for fabrication using AutoCad and Navisworks</li>
 
-**Nord University**  
+**Nord University - Teacher Assistant**  
 _Levanger, Trøndelag, Norway_  
 Sep 2020 – Dec 2020 
 <li>Taught design and graphics for the first-year Film and TV course, delivering weekly lessons to approximately 20 students throughout the first semester</li>
 
-**Summer Intern at Smart Media**  
+**Smart Media - Summer Intern**  
 _Steinkjer, Trøndelag, Norway_  
 Apr 2019 – Jul 2019  
 <li>Designed an interactive floor plan using Unity</li>
