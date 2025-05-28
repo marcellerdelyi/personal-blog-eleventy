@@ -7,13 +7,13 @@ const { config } = require("dotenv");
 module.exports = function (eleventyConfig) {
   // Add Passthrough Copy for CSS files
   eleventyConfig.addPassthroughCopy("./src/css");
-  eleventyConfig.addPassthroughCopy("src/assets/");
+  eleventyConfig.addPassthroughCopy("src/posts");
 
   // Watch Target for CSS directory
   eleventyConfig.addWatchTarget("./src/css");
 
   // Watch content images for the image pipeline.
-	eleventyConfig.addWatchTarget("content/**/*.{svg,webp,png,jpeg}");
+	eleventyConfig.addWatchTarget("content/**/*.{svg,webp,png,jpeg,gif}");
 
 
   // FILTERS - Modify data in template files at build time
@@ -28,12 +28,11 @@ module.exports = function (eleventyConfig) {
   
   // Syntax Highlighting Plugin
   eleventyConfig.addPlugin(pluginSyntaxHighlight);
-
   eleventyConfig.addPlugin(pluginImages);
 
   return {
 	 // Control which files Eleventy will process
-   templateFormats: ["md", "njk", "html", "liquid"],
+   templateFormats: ["md", "njk", "html", "liquid",],
 
     markdownTemplateEngine: "njk",
     dataTemplateEngine: "njk",

@@ -98,10 +98,6 @@ article ol {
 /* Media */
 
 main img {
-  display: block;
-  width: 100%;
-  min-height: 20rem;
-  max-height: 40vh;
   object-fit: contain;
   margin: 2rem auto;
 }
