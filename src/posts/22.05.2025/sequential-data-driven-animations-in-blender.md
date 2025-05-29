@@ -43,7 +43,7 @@ The model below shows the steps and decision-making required to convert my model
 Later, I added additional bits related to work whitin the Blender side of things. 
 In the end, it became a model of the entire process, from Stud.io to final output from Blender, the MP4 file containing the animated sequence.
 // {% image "./Studio_Blender_Flow.jpg", "Stut.io to Blender pipeline"%}
-_diagram showing the model and data flow from Stud.io to Blender and then to the final outp_
+_diagram showing the model and data flow from Stud.io to Blender and then to the final output_
 
 # Bricklink and Stud.io
 When it comes to this project I have decided to use Bricklink Studio where i created my digital Lego set. For the install, I went directly to Bricklink.com and downloaded Stud.io.
