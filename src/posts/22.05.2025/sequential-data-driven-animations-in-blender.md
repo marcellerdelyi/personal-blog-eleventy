@@ -37,22 +37,30 @@ LDD was Lego’s official digital modelling software until it was officially rep
 - Reddit discussion: [Best program? : r/DigitalLego](https://www.reddit.com/r/DigitalLego/comments/1b4rpkg/best_program/)
 - (Only in Norwegian) Discussion about tool preferences and a take on LDD: LDD - [LEGO Digital Design - Generelt / Annet LEGO-relatert - Brikkelauget](https://www.brikkelauget.no/t/ldd-lego-digital-design/5651)
 
-# Stud.io to Blender Workflow
-
-The model below shows the steps and decision-making required to convert my model from Stud.io to blender.
-Later, I added additional bits related to work whitin the Blender side of things. 
-In the end, it became a model of the entire process, from Stud.io to final output from Blender, the MP4 file containing the animated sequence.
-// {% image "./Studio_Blender_Flow.jpg", "Stut.io to Blender pipeline"%}
-_diagram showing the model and data flow from Stud.io to Blender and then to the final output_
-
 # Bricklink and Stud.io
-When it comes to this project I have decided to use Bricklink Studio where i created my digital Lego set. For the install, I went directly to Bricklink.com and downloaded Stud.io.
+For this project, I've decided to use Bricklink's Stud.io to build the digital Lego set. For the install, I went directly to Bricklink.com and downloaded [Stud.io](https://www.bricklink.com/v3/studio/download.page). 
 
-As a first impression, I found the UI and navigation in the program intuitive, but I'm not yet comfortable with the building controls. This I have to get used to. I love how large Studio's part library is. It allows you to basically create anything in any colour you ever wanted. It truly feels like building with real Lego bricks, once you get the hang of it.
+As a first impression, I found the UI and navigation in the program intuitive, but I'm not yet comfortable with the building controls, something I have to get used to. I love how large Stud.io's part library is. It allows you to basically create anything in any colour you ever wanted. It truly feels like building with real Lego bricks, once you get the hang of it.
 
 After some playing around, I decided to try to make something myself.
 
-I landed on creating a tiny micro scale Floating Offshore Wind Turbine (FOWT), After browsing around I did find an already existing Polybag model, in similar dimensions as I wanted it. To create the white turbine I used parts from LEGO Wind Energy Set 11952, and a few 1x1 round brick pieces and 1x6 plates in yellow colour, to create the floating ballast tanks. When searching for the right pieces I mainly used the inbuilt part library in Studio in combination with Set Inventory on Bricklink. Set Inventory displays parts from existing Lego sets. This feature is particularly helpful if you're trying to find a specific piece from a set you remember or own.Whenever I was stuck I looked up the part number names here and then pasted it into Stud.io.
+I landed on creating a tiny micro scale Floating Offshore Wind Turbine (FOWT).
+{% image "./Agucadoura_WindFloat_Prototype_edited.jpg", "Agucadoura WindFloat Prototype, CC BY-SA 3.0" %}
+_An image of a FOWT that I used as a reference. Credit: [“Agucadoura WindFloat Prototype”](https://commons.wikimedia.org/wiki/File:Agucadoura_WindFloat_Prototype.jpg) by [Untrakdrover](https://commons.wikimedia.org/wiki/User:Untrakdrover), licensed under [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/))_
+
+After browsing around I did find an already existing Polybag model, in similar dimensions as I wanted it. To create the white turbine I used parts from [LEGO Wind Energy Set 11952](https://www.bricklink.com/v2/catalog/catalogitem.page?S=11952-1&name=Wind%20Turbine%20and%20Wind%20Mill%20polybag&category=%5BExplorer%5D#T=S&O=%22iconly%22:0), and a few 1x1 round brick pieces and 1x6 plates in yellow colour, to create the floating ballast tanks.
+{% image "./11952-1.png", "LEGO Wind Energy Set 11952" %}
+_LEGO Wind Energy Set 11952 which I used the turbine from_
+
+
+When searching for the right pieces I mainly used the inbuilt part library in Stud.io in combination with Set Inventory on Bricklink. Set Inventory displays parts from existing Lego sets. This feature is particularly helpful if you're trying to find a specific piece from a set you remember or own.Whenever I was stuck I looked up the part number names here and then pasted it into Stud.io.
+
+# Stud.io to Blender Workflow
+
+The diagram below illustrates the steps and decision-making requires to transfer a model from Stud.io to blender.
+![diagram showing the model and data flow from Stud.io to Blende](../Studio_Blender_Flow_drawio.svg)
+
+_diagram showing the model and data flow from Stud.io to Blender_
 
 # Stud.io and Blender
 After I finished modelling, I moved over to Blender to continue the process. Stud.io does not have native support for Blender, but then how could I import my model and use it in Blender?
@@ -61,8 +69,9 @@ There is an open source addon called Import Ldraw that lets Blender import ldraw
 
 In my case, I used both addons for different purposes, so I couldn’t decide which one I preferred.
 
-## Exporting from Studio
-When it comes to file formats in Studio, you have the following available options for you.
+**Exporting from Stud.io**:
+
+When it comes to file formats in Stud.io, you have the following available options for you.
 
 - **Wavefront (.obj)** is a simple format that merges your model on export, so if you want to keep every piece of your model separate you need to use another format
 - **Ldraw**, The most versatile format, this will keep each piece separate. This I ended up using myself.
@@ -73,7 +82,7 @@ When it comes to file formats in Studio, you have the following available option
 
 To start using the Ldraw plugin go to this github repo download and install the plugin.
 
-The advantage of this workflow is that I can quickly make changes to my model in Studio, then hop over to Blender and re-import it using the addon. This allows me to do quick iterations with the least amount of manual clicks and hoops to jump through. Importing can sometimes take a while, depending on your model’s size.
+The advantage of this workflow is that I can quickly make changes to my model in Stud.io, then hop over to Blender and re-import it using the addon. This allows me to do quick iterations with the least amount of manual clicks and hoops to jump through. Importing can sometimes take a while, depending on your model’s size.
 
 ### Mecabricks
 For Mecabricks I used their Blender plugin to transfer my model into Blender using a format called .zmbx.
@@ -103,16 +112,15 @@ You can use any Blender version as long as it supports the latest Mecabricks add
 
 To install the Mecabricks Lite, open Blender, navigate to Edit > Preferences > Add-ons, click install and select the zip file you just downloaded.
 
-# Blender setup
+# Blender scene setup
 
-## Importing a model (Ldraw)
+**Importing a model (Ldraw)**
 Something about Ldraw imports…
 
-## Importing a model (Mecabricks)
+**Importing a model (Mecabricks)**
 Navigate to File > Import > Mecabricks (.zmbx). Once imported, I scaled the model down to 0.001m to correct its size.
 
-## Setting up a scene
-First I started with adding a simple plane that I scaled up by 50 units, which gave me a total plane dimension of 100 meters along both the X and Y axes.
+After the import, I started with adding a simple plane that I scaled up by 50 units, which gave me a total plane dimension of 100 meters along both the X and Y axes.
 Then, I applied scale (Insert Blender meme)
 
 For the plane material, I created this blue checker matte texture based on Blender's built in brick texture. I adjusted the parameters on the brick texture until I got the look I was aiming for.
@@ -125,18 +133,22 @@ Returning to the viewport, I added a point light with the settings shown below, 
 
 Since I wanted a dark, black-void background, I went into the World Properties panel, and under Surface properties, I lowered the values on the Color properties.
 
-### Render settings
+**Render settings**
+
 As I mentioned earlier, for rendering I used Cycles and I changed the render device from CPU to GPU. Under the Sampling menu, I set the Max Samples to 256 for both Viewport and Render, although I think 128 could also be sufficient. Finally I enabled Denoising on rendering (if it hasn’t been by default)
 
-### Motion Blur
+**Motion Blur**
+
 Motion blur can be a bit finicky. While it's not as precise as adding it later in compositing, Blender's built-in motion blur does a decent job for general use. In my experience, setting the Position to Center on Frame gave the best results.
 
-### Rendering tips
+**Rendering tips**
+
 It’s always a good idea to do experimental renders. Play around with sample rates, denoising, noise threshold rates, persistent data. Especially for animations, enabling persistent data can save a lot of time when rendering. When you press render you have a built time and a render time that runs on each frame to build your image. With persistent data enabled, your built time will run only once on the first frame and any subsequent frames will be running rendering time only, in other words the data is cached.
 
 It's always good practice to experiment with test renders. I often play around with Sample Rates, Denoising, Noise Thresholds, and Persistent Data.For animations, enabling Persistent Data significantly speeds up rendering. Normally, Blender builds the scene data for each frame. With Persistent Data enabled, the build time only occurs on the first frame, and subsequent frames only use rendering time because the data is cached.
 
-### Combining the image sequence into video
+**Combining the image sequence into video**
+
 For simple animations like this, I combine my rendered image sequences directly in Blender’s compositor.
 To use it, I switched over to the Compositor workspace. Then I loaded my rendered image sequence into the compositor and continued from there.
 

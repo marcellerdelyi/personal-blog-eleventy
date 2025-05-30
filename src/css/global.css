@@ -75,6 +75,10 @@ article ol {
   margin-left: 1.5rem;
 }
 
+:is(em) {
+  font-size: smaller;
+}
+
 /* Nav */
 
 .nav-list {
