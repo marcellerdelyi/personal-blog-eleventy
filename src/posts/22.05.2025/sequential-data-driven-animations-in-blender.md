@@ -120,7 +120,10 @@ Navigate to File > Import > Mecabricks (.zmbx). Once imported, I scale the model
 **Scene setup**
 
 After the import, I started with adding a simple plane that I scaled up by 50 units, which gave me a total plane dimension of 100 meters along both the X and Y axes.
-Then, I applied scale (Insert Blender meme)
+
+Then, I applied scale.
+{% image "./When_in_doubt.png", "When in doubt" %}
+_A famous line from Andrew Price Blender conference 2024_
 
 For the plane material, I created this blue checker matte texture based on Blender's built in brick texture. I adjusted the parameters on the brick texture until I got the look I was aiming for.
 
