@@ -3,20 +3,20 @@ title: "Sequential Data-driven Animations in Blender"
 description: "How I made a sequential, data-driven 3D animation in Blender, using digital Lego bricks."
 date: 2025-05-22
 ---
-
+{% image "./Windmill_Hero_1600x1200.png", "Hero Image of the Lego Windmill" %}
 # Abstract
-How I made a sequential, data-driven 3D animation in Blender, using digital Lego bricks.
+How I made a sequential data-driven animations in Blender using digital Lego bricks, spreadsheets, LLMs, and python scripting.
 
 # Background
-In the autumn of 2024, in a small town in the middle of Norway, I was holding a presentation at a local University where former students were sharing stories about how they transitioned into work life after finishing their studies. I did my best to prepare for my presentation, but I ultimately only had time to create a brief speech and a 3D animation video. We were in a big auditorium, and I was the last to present. Behind me, on two large screens was playing my video, an assembly animation of an offshore windmill made out of digital Lego bricks. 
+In the autumn of 2024, in a small town in the middle of Norway, I was holding a presentation at a local university where former students were sharing stories about how they transitioned into work life after finishing their studies. I did my best to prepare for my presentation, but I ultimately only had time to create a brief speech and a 3D animation video. We were in a big auditorium, and I was the last to present. Behind me, on two large screens my video was playing, an assembly animation of an offshore windmill made out of digital Lego bricks. 
 
-Just a couple days before this event, I was sitting at my home desk getting ready for my presentation. Since I produce a lot of 3D animation in my daily job, it made sense to me to show something related to this. The only issue was that strict NDA regulations prevented me from showcasing actual customer projects, so I had to be creative to make something that resembled a comparable workflow.
+Just a couple days before this event, I was sitting at my home desk getting ready for my presentation. Since I work a lot with 3D animation in my daily job, it made sense to show something related to that.
 
-I work for an engineering firm where I'm in charge of visualising and producing 3D animated building sequences of the assembly process of massive offshore steel structures, mainly used in the production of fossil and renewable energy sources.
+I work for an engineering firm, where I create 3D animations based on technical assembly manuals, illustrating step-by-step how massive offshore steel structures are put together. These structures are primarily used in fossil and renewable energy production.
 
-I've discovered that dealing with these building animations and reading through countless instruction manuals is a very similar process to one of my favourite hobbies, assembling Lego sets following the instruction booklet.
+I've discovered that dealing with these building animations and reading through countless instruction manuals is a very similar process to one of my favourite hobbies, building with Lego bricks. Both involve sequential assembly steps and manuals or in Lego's case, instruction booklets, showing how to put everything together.
 
-This sparked the idea to create my own tiny assembly animation made out of digital Lego bricks, using spreadsheet data and Python scripting in Blender to drive the animation. This animation was what I ended up presenting at the Alumni meeting.
+This sparked the idea to create my own tiny assembly animation made out of digital Lego bricks, using spreadsheet data and Python scripting in Blender to create the animation. This animation was what I ended up presenting at the university.
 
 Working on the project just took a few days, but writing this article took many months to complete. I intend to write this article as a way to share my experience, in case it proves to be useful for others with similar interests. If you notice any mistakes or see anything I’ve overlooked, please reach out to me.
 
@@ -24,13 +24,14 @@ Working on the project just took a few days, but writing this article took many 
 Digital technology has significantly changed how enthusiasts of Lego express their creativity. Applications such as Bricklink Studio remove physical boundaries, providing unlimited access to every Lego element in any color imaginable. This allows anyone with a computer regardless of access to physical Lego bricks, available space, or economic circumstances to fully explore their creativity and build without limitations.
 
 ## The oceans of digital Lego tools
+If you’ve ever googled how to create digital Lego models, you might have been overwhelmed by the options as I was. Here I collected a handful of tools mentioned across the internet.
 
 1. **Lego Digital Designer (LDD)** - Deprecated
 LDD was Lego’s official digital modelling software until it was officially replaced by Bricklink Studio in 2022. Although discontinued and no longer updated, it remains functional. I briefly used it back in 2017 and I still have an older version installed on my PC. One feature I liked was its automatic and interactive building instructions, with an option to export to HTML.
 2. **LeoCAD** - LeoCAD is one of the oldest programs for digital Lego building, first released in 1997. It’s designed to work with the LDraw library, this requires you to install and link to the external LDraw library in LeoCAD's preferences.
 3. **LDraw** - LDraw is not a program but an open-source brick library, arguably the largest available in the galaxy. Its file format is highly interoperable with other software because many tools use the LDraw library as their foundation.
 4. **Bricklink Studio (a.k.a. Stud.io)** - Stud.io offers an extensive brick library (backed by Ldraw) and the ability to export a parts list of your creation, which you can use to order real Lego pieces and build your model in real life. Some users say its color support is limited, but I haven’t encountered this issue myself with my limited experience.
-5. **Mecabricks** - Finally there is Mecabricks. Mecabricks runs entirely in your browser and has a dedicated Blender add-on that works flawlessly out of the box. Its geometry is clean and render-friendly, with no gaps in imported bricks. While I haven’t tested its brick library extensively, I’ve read that it’s excellent for designing minifigures and includes many of the latest molds. [The creator of Mecabricks mentions](https://rockraidersunited.com/topic/7898-ldraw-vs-mecabricks-vs-ldd-for-game-models/) that they create their own bricks, and directly in Blender, using techniques such as 3D scanning, to accurately represent real Lego pieces digitally.
+5. **Mecabricks** - Finally there is Mecabricks. Mecabricks runs entirely in your browser and has a dedicated Blender addon that works flawlessly out of the box. Its geometry is clean and render-friendly, with no gaps in imported bricks. While I haven’t tested its brick library extensively, I’ve read that it’s excellent for designing minifigures and includes many of the latest molds. [The creator of Mecabricks mentions](https://rockraidersunited.com/topic/7898-ldraw-vs-mecabricks-vs-ldd-for-game-models/) that they create their own bricks, and directly in Blender, using techniques such as 3D scanning, to accurately represent real Lego pieces digitally.
 6. **ImportLdraw Blender Plug-in** - An alternative to the Mecabricks Blender plug-in, this tool imports LDraw files directly into Blender without any additional setup—just install the plug-in from GitHub. Accurate, compatible, and quick imports are its main advantages.
 
 ### For further reading:
@@ -50,8 +51,7 @@ _An image of a FOWT that I used as a reference. Credit: [“Agucadoura WindFloat
 
 After browsing around I did find an already existing Polybag model, in similar dimensions as I wanted it. To create the white turbine I used parts from [LEGO Wind Energy Set 11952](https://www.bricklink.com/v2/catalog/catalogitem.page?S=11952-1&name=Wind%20Turbine%20and%20Wind%20Mill%20polybag&category=%5BExplorer%5D#T=S&O=%22iconly%22:0), and a few 1x1 round brick pieces and 1x6 plates in yellow colour, to create the floating ballast tanks.
 {% image "./11952-1.png", "LEGO Wind Energy Set 11952" %}
-_LEGO Wind Energy Set 11952 which I used the turbine from_
-
+_I used the white turbine from the LEGO Wind Energy Set 11952_
 
 When searching for the right pieces I mainly used the inbuilt part library in Stud.io in combination with Set Inventory on Bricklink. Set Inventory displays parts from existing Lego sets. This feature is particularly helpful if you're trying to find a specific piece from a set you remember or own.Whenever I was stuck I looked up the part number names here and then pasted it into Stud.io.
 
@@ -77,22 +77,26 @@ When it comes to file formats in Stud.io, you have the following available optio
 - **Ldraw**, The most versatile format, this will keep each piece separate. This I ended up using myself.
 - **Collada (.dae)**: If your model includes stickers or decals, you will need to export a Collada file beside your Ldraw to preserve the textures.
 
-## Blender Imports
+## Blender addons
 ### Import Ldraw addon
 
-To start using the Ldraw plugin go to this github repo download and install the plugin.
+To start using the Ldraw plugin go to [this github repo](https://github.com/TobyLobster/ImportLDraw) download and install the plugin.
 
 The advantage of this workflow is that I can quickly make changes to my model in Stud.io, then hop over to Blender and re-import it using the addon. This allows me to do quick iterations with the least amount of manual clicks and hoops to jump through. Importing can sometimes take a while, depending on your model’s size.
 
 ### Mecabricks
 For Mecabricks I used their Blender plugin to transfer my model into Blender using a format called .zmbx.
+You can use any Blender version as long as it supports the latest Mecabricks addon. Mecabricks offers two versions of their addon: the free Lite version and the paid Advanced version. I used the Lite version.
 
-#### To get access to the addon
-1. Go to Mecabricks.com
+To get access to the addon simply:
+
+1. Go to [Mecabricks.com](https://mecabricks.com/en/)
 2. Create an account
-3. Download the Blender add-on
+3. Download the [Mecabricks Lite Blender addon](https://mecabricks.com/en/shop/product/2)
 
-_Note:_ While you can import LDraw models into Mecabricks without logging in, you must be logged in to export them.
+_Note:_ 
+1. While you can import LDraw models into Mecabricks without logging in, you must be logged in to export them.
+2. To install the Mecabricks Lite, open Blender, navigate to Edit > Preferences > addons, click install and select the zip file you just downloaded.
 
 #### Import model into Mecabricks
 After creating an account, navigate to the "Workshop" page. Import your model file by selecting Import LDraw.
@@ -100,25 +104,20 @@ After creating an account, navigate to the "Workshop" page. Import your model fi
 #### Export from Mecabricks
 Before exporting, I briefly reviewed my model for any issues. Then I clicked on File, then Export from the dropdown menu
 
-In the export dialog box, I set the Format field to Blender Add-on (.zmbx).
+In the export dialog box, I set the Format field to Blender addon (.zmbx).
 Click Export to save the file.
-[Insert image of the dialog box here]
-
-#### Install Blender and the Mecabricks Add-on
-You can use any Blender version as long as it supports the latest Mecabricks add-on.  At the time of writing, I’m using Blender version 4.1.1. Mecabricks offers two versions of their add-on: the free Lite version and the paid Advanced version. I used the Lite version.
-
-- Download Blender: [Link to Blender download]
-- Download the Mecabricks Lite Blender add-on: [Link to add-on download]
-
-To install the Mecabricks Lite, open Blender, navigate to Edit > Preferences > Add-ons, click install and select the zip file you just downloaded.
+{% image "./Mecabricks_Export.png", "dialog box, choose .zmbx" %}
+_Export dialog window in the Mecabricks web editor_
 
 # Blender scene setup
 
 **Importing a model (Ldraw)**
-Something about Ldraw imports…
+Navigate to File > Import > Ldraw
 
 **Importing a model (Mecabricks)**
-Navigate to File > Import > Mecabricks (.zmbx). Once imported, I scaled the model down to 0.001m to correct its size.
+Navigate to File > Import > Mecabricks (.zmbx). Once imported, I scale the model down to 0.001m to correct its size.
+
+**Scene setup**
 
 After the import, I started with adding a simple plane that I scaled up by 50 units, which gave me a total plane dimension of 100 meters along both the X and Y axes.
 Then, I applied scale (Insert Blender meme)
@@ -184,14 +183,21 @@ Although this version was quickly put together and somewhat crude, it successful
 After completing my initial prototype and gaining a bit more experience, along with a clearer understanding of Python in Blender, I decided to revisit the script. I felt confident I could reshape the entire script on my own. I systematically dissected the original script line-by-line until things started to break, and then figured out ways to fix it myself while cleaning up the LLM-generated code so it was easier for me to understand. In the end, I had a script that was more aligned with the project's original goal.
 
 ### Script overview
-The script consists of five key components:
+The script consists 6 key components:
 1. **Clear existing animations**: Automatically clears all existing keyframes, so I don’t have to do this manually each time I want to test the animation.
-2. **Animation settings**: User-defined parameters that control the timing, pacing, and positions of animation elements:
-    - **hide_z**: Position far below the scene to hide objects initially.
-    - **spawn_z**: Height from which the object appears.
-    - **hold_keyframe**: Number of frames an object pauses after spawning.
-    - **next_keyframe**: Frames between the hold and final keyframe positions of an object.
-3. **Reading CSV data**: The script reads assembly order data from a user-defined CSV file, listing objects in the sequence they'll appear.
+2. **Set file paths**: Here the path needs to be set to the csv file containing the order of assembly.
+```python
+csvfilepath = r"C:\path\to\your\list.csv"
+```
+3. **Animation parameters**: User-defined parameters that control the timing, pacing, and positions of animation elements.
+```python
+hide_z = -1000      # Position far below the scene to hide objects initially
+spawn_z = 5         # Height from which objects appear
+hold_keyframe = 12  # Frames to pause after spawning
+next_keyframe = 24  # Frames for final movement
+```
+
+4. **Reading CSV data**: The script reads assembly order data from a user-defined CSV file, listing objects in the sequence they'll appear.
 
 | AssemblyOrder | ObjectName |
 | ------------ | --------- |
@@ -199,19 +205,19 @@ The script consists of five key components:
 | 2             | part.002   |
 | 3             | part.003   |
 
-4. **Animating objects sequentially**: The script uses the CSV to animate objects either in their listed order or reversed, based on a boolean (list_order). Each object:
+5. **Animating objects sequentially**: The script uses the CSV to animate objects either in their listed order or reversed, based on a boolean (list_order). Each object:
     - Moves to the hidden position.
     - Appears at a spawn position.
     - Hold briefly.
     - Moves to its final assembled location.
 
-5. **Adjust playback range**: The script sets Blender's playback range based on the inputs.
+6. **Adjust playback range**: The script sets Blender's playback range based on the inputs.
 
 Here's the part that creates the actual animations:
 
 ```python
 # -------------------------------------------------------
-# 5) Animate objects in a sorted order
+# 6) Animate objects in a sorted order
 # -------------------------------------------------------
 
 def animator(current_frame, list_order):
@@ -278,7 +284,7 @@ bpy.data.scenes["Scene"].frame_end = 888  # Adjust according to your animation l
 
 # Conclusion
 
-In the end, the reworked version was significantly better than my original script. It also helped me to reduce manual work and gave me more precise control over animation timing. The complete code is available on my [Github](https://github.com/marcellerdelyi/personal-blog-eleventy).
+In the end, the reworked version was significantly better than my original script. It also helped me to reduce manual work and gave me more precise control over animation timing. The complete code is available on my [Github](https://github.com/marcellerdelyi/soa).
 
 On a personal note, this was the most fun I had with a project in a long time. I learned how I can make Lego animations using Stud.io and Blender, and that I'm not restricted by the physical need to acquire Lego bricks to build my creations.
 
