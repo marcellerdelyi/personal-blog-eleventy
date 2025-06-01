@@ -40,7 +40,7 @@ Apr 2019 – Jul 2019
 _Steinkjer, Trøndelag, Norway_  
 Aug 2018 – Jun 2021
 <li>Bachelor's Degree in 3D Art, Animation & VFX</li>
-<li>BSc thesis: "Procedural animation of an industrial robot",  combined research and real-world testing conducted during an internship at Aker Solutions. The project developed and proposed a workflow for creating a fully procedural animated robotic arm for virtual industrial environments.</li>
+<li>BA thesis: "Procedural animation of an industrial robot",  combined research and real-world testing conducted during an internship at Aker Solutions. The project developed and proposed a workflow for creating a fully procedural animated robotic arm for virtual industrial environments.</li>
 
 **Mesharray Digital Media School**  
 _Budapest, Hungary_  
@@ -68,7 +68,7 @@ Aug 2018 – Aug 2019
 
 - **personal website**
 
-<p><a href="https://github.com/marcellerdelyi/personal-blog-eleventy">personal-blog-eleventy.pages.dev</a><p\>
+<p><a href="https://github.com/marcellerdelyi/personal-blog-eleventy">marcellerdelyi.com</a><p\>
 
 ## Language
 ---

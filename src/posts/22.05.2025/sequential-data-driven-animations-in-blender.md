@@ -166,7 +166,7 @@ Although this version was quickly put together and somewhat crude, it successful
 ## Second prototype and current version
 After completing my initial prototype and gaining a bit more experience, along with a clearer understanding of Python in Blender, I decided to revisit the script. I felt confident I could reshape the entire script on my own. I systematically dissected the original script line-by-line until things started to break, and then figured out ways to fix it myself while cleaning up the LLM-generated code so it was easier for me to understand. In the end, I had a script that was more aligned with the project's original goal.
 
-Beside scripting, I also simplified my Blender scene. I went back to the basics, I added three cubes with three different colours and made the csv data with only three rows. This reduced complexity made me focus more on what actually mattered the most and made it a lot easier for my brain to focus on nailig down the animation that the scipt was outputting. Down below you will see an ecample spreadsheet. This simple, three row csv data I used for testing out the animation.
+Beside scripting, I also simplified my Blender scene. I went back to the basics, I added three cubes with three different colours and made the csv data with only three rows. This reduced complexity made me focus more on what actually mattered the most and made it a lot easier for my brain to focus on nailig down the animation that the scipt was outputting. Down below you will see an example spreadsheet. This simple, three row csv data I used for testing out the animation.
 
 {% image "./Simplified_Blender_Scene.png", "Simplified Blender scene with 3 differently coloured cubes" %}
 _The simplified Blender scene after starting over_
