@@ -94,7 +94,7 @@ To get access to the addon simply:
 2. Create an account
 3. Download the [Mecabricks Lite Blender addon](https://mecabricks.com/en/shop/product/2)
 
-_Note:_ 
+_Note:_
 1. While you can import LDraw models into Mecabricks without logging in, you must be logged in to export them.
 2. To install the Mecabricks Lite, open Blender, navigate to Edit > Preferences > addons, click install and select the zip file you just downloaded.
 
@@ -135,27 +135,8 @@ Returning to the viewport, I added a point light with the settings shown below, 
 
 Since I wanted a dark, black-void background, I went into the World Properties panel, and under Surface properties, I lowered the values on the Color properties.
 
-**Render settings**
-
-As I mentioned earlier, for rendering I used Cycles and I changed the render device from CPU to GPU. Under the Sampling menu, I set the Max Samples to 256 for both Viewport and Render, although I think 128 could also be sufficient. Finally I enabled Denoising on rendering (if it hasn’t been by default)
-
-**Motion Blur**
-
-Motion blur can be a bit finicky. While it's not as precise as adding it later in compositing, Blender's built-in motion blur does a decent job for general use. In my experience, setting the Position to Center on Frame gave the best results.
-
-**Rendering tips**
-
-It’s always a good idea to do experimental renders. Play around with sample rates, denoising, noise threshold rates, persistent data. Especially for animations, enabling persistent data can save a lot of time when rendering. When you press render you have a built time and a render time that runs on each frame to build your image. With persistent data enabled, your built time will run only once on the first frame and any subsequent frames will be running rendering time only, in other words the data is cached.
-
-It's always good practice to experiment with test renders. I often play around with Sample Rates, Denoising, Noise Thresholds, and Persistent Data.For animations, enabling Persistent Data significantly speeds up rendering. Normally, Blender builds the scene data for each frame. With Persistent Data enabled, the build time only occurs on the first frame, and subsequent frames only use rendering time because the data is cached.
-
-**Combining the image sequence into video**
-
-For simple animations like this, I combine my rendered image sequences directly in Blender’s compositor.
-To use it, I switched over to the Compositor workspace. Then I loaded my rendered image sequence into the compositor and continued from there.
-
-Tip! You can use an alpha channel node to blend rendered images with a different background.
-
+{% image "./Blender_Scene_Setup.png", "Scene setup" %}
+_How the scene is setup, backdrop plane, camera and empties controlling the camera depth of field_
 # Animation
 With the scene complete, it was time to animate the Lego pieces. In the next segment, I'm going to show how I started by manually experimenting with simple animations and finally moving over to a partially automated process using scripting.
 
@@ -184,6 +165,12 @@ Although this version was quickly put together and somewhat crude, it successful
 
 ## Second prototype and current version
 After completing my initial prototype and gaining a bit more experience, along with a clearer understanding of Python in Blender, I decided to revisit the script. I felt confident I could reshape the entire script on my own. I systematically dissected the original script line-by-line until things started to break, and then figured out ways to fix it myself while cleaning up the LLM-generated code so it was easier for me to understand. In the end, I had a script that was more aligned with the project's original goal.
+
+Beside scripting, I also simplified my Blender scene. I went back to the basics, I added three cubes with three different colours and made the csv data with only three rows. This reduced complexity made me focus more on what actually mattered the most and made it a lot easier for my brain to focus on nailig down the animation that the scipt was outputting. Down below you will see an ecample spreadsheet. This simple, three row csv data I used for testing out the animation.
+
+{% image "./Simplified_Blender_Scene.png", "Simplified Blender scene with 3 differently coloured cubes" %}
+_The simplified Blender scene after starting over_
+
 
 ### Script overview
 The script consists 6 key components:
@@ -283,7 +270,32 @@ I can set the desired playback range with **Start Frame** and **End Frame** eith
 bpy.data.scenes["Scene"].frame_start = 0
 bpy.data.scenes["Scene"].frame_end = 888  # Adjust according to your animation length
 ```
+
+{% image "./Blender_Final_Scene_Setup.png", "Final Blender scene with all the materials" %}
+_The final render scene with all the materials, ready for rendering_
+
+# Rendering and making animation sequence into video
+
 ![Alt text](../Windmill.gif)
+
+For the final renders I used Cycles, but for all the testing I used Eevee.
+When it comes to settings, I changed a few default options.
+- Changed the render device from CPU to GPU
+- Under the Sampling menu, I set the Max Samples to 256 for both Viewport and Render, although I think 128 could also be sufficient
+- Enabled Denoising on rendering (if it hasn’t been by default)
+
+_**Some rendering tips**: It's always good practice to experiment with test renders. I often play around with Sample Rates, Denoising, Noise Thresholds, and Persistent Data. For animations, enabling Persistent Data significantly speeds up rendering. Normally, Blender builds the scene data for each frame. With Persistent Data enabled, the build time only occurs on the first frame, and subsequent frames only use rendering time because the data is cached._
+
+**Motion Blur**
+
+Adding Motion blur directly in your scene in real time can be a bit finicky. While it's not as precise as adding it later in compositing, Blender's built-in motion blur does a decent job for general use. In my experience, setting the Position to Center on Frame gave the best results.
+
+**Combining the image sequence into video**
+
+For simple animations like this, I combine my rendered image sequences directly in Blender’s compositor.
+To use it, I switched over to the Compositor workspace, then loaded my rendered image sequence into the compositor and continued from there.
+
+_**Tip**: You can use an alpha channel node to blend rendered images with a different background._
 
 # Conclusion
 
