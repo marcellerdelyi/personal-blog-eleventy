@@ -37,6 +37,8 @@ main * + * {
 header {
   color: #ffffff;
   border-bottom: 1px solid #000000c2;
+  position: sticky;
+  top: 0;
   padding-top: 2vh;
   padding-bottom: 2vh;
   background: salmon;
