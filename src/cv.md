@@ -12,7 +12,7 @@ layout: base.njk
 
 ## About
 
-I'm a visualization engineer with over 4 years of experience, specializing in technical animations and detailed product renderings for large-scale offshore platforms. My main focus is assembly animations and digital product renderings ,but I'm also interested in game development and scripting. I'm creating products that are used in both engineering and marketing. Beyond my core responsibility, I'm also involved with post production works on films, handling tasks such as colour correction of footage and creaing simple graphic elements.
+I'm a visualization engineer with over 4 years of experience, specializing in technical animations and detailed product renderings for large-scale offshore platforms. My main focus is assembly animations and digital product renderings ,but I'm also interested in game development and scripting. I'm creating products that are used in both engineering and marketing. Beyond my core responsibility, I'm also involved with post production works on films, handling tasks such as colour correction of footage and creating simple graphic elements.
 
 ## Work Experience
 ---
@@ -21,15 +21,15 @@ I'm a visualization engineer with over 4 years of experience, specializing in te
 _Verdal, Trøndelag, Norway_  
 Sep 2021 – Present
 
-Over the years, I’ve delivered various product assembly animations and digital renderings for both internal engineering teams and external promotional purposes. Many of these visuals are for projects that are either currently under construction or already deployed accross major North Sea fields such as Jackdaw, Yggdrasil, and East Anglia, to name a few.
+Over the years, I’ve delivered various product assembly animations and digital renderings for both internal engineering teams and external promotional purposes. Many of these visuals are for projects that are either currently under construction or already deployed across major North Sea fields such as Jackdaw, Yggdrasil, and East Anglia, to name a few.
 
-I’ve also played a role in setting up a collaborative development environment using Perforce version control. This included configuring servers on both Linux and Windows, and later deploying the production server with additional tools to support intenal team workflows.
+I’ve also played a role in setting up a collaborative development environment using Perforce version control. This included configuring servers on both Linux and Windows, and later deploying the production server with additional tools to support internal team workflows.
 
-As part of an Unreal Engine–based planning application, I assisted in developing the animation pipeline for handling rigs and 3D assets. I created all the rigs, animations and prepeared environmental assets including cranes, buildings, and other smaller elements
+As part of an Unreal Engine–based planning application, I assisted in developing the animation pipeline for handling rigs and 3D assets. I created all the rigs, animations and prepared environmental assets including cranes, buildings, and other smaller elements
 
-I helped establish a working pipeline between Unreal Engine and DaVinci Resolve to aid post-production work related to editing and color grading.
+I helped establish a working pipeline between Unreal Engine and DaVinci Resolve to aid post-production work related to editing and colour grading.
 
-I continue to be actively involved in post-production for film-related projects, focusing primarily on color correction for both internal presentations and external communication materials.
+I continue to be actively involved in post-production for film-related projects, focusing primarily on colour correction for both internal presentations and external communication materials.
 
 Additionally, I’ve contributed to technical documentation to help standardize and document visualization workflows across the team.
 
