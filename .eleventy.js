@@ -2,7 +2,7 @@ const { DateTime } = require("luxon");
 const pluginSyntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 
 const pluginImages = require("./eleventy.config.images.js");
-const { config } = require("dotenv");
+//const { config } = require("dotenv");
 
 module.exports = function (eleventyConfig) {
   // Add Passthrough Copy for CSS files
@@ -24,8 +24,7 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addCollection("recentPosts", function(collectionApi) {
     return collectionApi.getFilteredByGlob("./src/posts/**/*.md").reverse().slice(0, 3);
   });
-  
-  
+
   // Syntax Highlighting Plugin
   eleventyConfig.addPlugin(pluginSyntaxHighlight);
   eleventyConfig.addPlugin(pluginImages);
