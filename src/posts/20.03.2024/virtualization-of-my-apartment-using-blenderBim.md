@@ -1,21 +1,19 @@
 ---
-title: "A virtualisation journey: How to build a virtual replica of your own living space"
+title: "A creative exploration: How to build an interactable virtual replica of your own living space"
 description: " How to build an interactive experiences of your home using Blender and Unity"
-date: 2000-00-00
+date: 2026-01-01
 ---
 
-
-// This is an introduction to a blog series where I will explore the capabilities of the Blender BIM addon by creating a 3D model and floor plan of my own apartment as part of this experiment.
-
-A creative exploration project with the goal to build an interactable virual copy of my own living space.
-
-
+A creative exploration project that focuses on how to build, edit and maintain a virual copy of my own living space, and how this model can be easily accessable anywhere using a web browser.
 
 # Background
 
-A few months ago, I decided to review my apartment's layout in preparation for a future renovation. To my surprise, I discovered that no official drawings existed. Built in the 1950s and renovated between 2005-2007, my apartment lacked any formal construction or renovation documentation. After speaking with a neighbour, I learned that the building was originally a local convenience store, and any existing plans were likely lost.
+In the spring of 2024, in preparation for a future sale, I decided to try and dig up a layout for my apartment unit. To my surprise, I discovered that no official drawings existed for the building. Built in the 1950s, originally as a convenience store, and later turned into an apartment complex that was renovated in 2014, my apartment lacked any formal construction or renovation documentation. This is rather strange considering I live in Norway, a country known for strict regulations nowadays ,but it seems regulations were much more lenient back in the 50s. Strangely, very little documentation follows the 2014 renovation either, which should have had paperwork in place to legally carry out upgrades to the dwellings. This was before my time owning the property. After speaking with neighbors, I learned that any existing plans were likely lost; they were hand-drawn by a local architect who held the last known copies of the building's blueprints and passed away some time ago.
 
-With no existing plans to rely on, I decided to create my own and document the process.
+With no existing plans to rely on, I took it upon myself to draft my own 2D floor plan. However, what started as a simple necessity for a real estate listing quickly evolved into a larger technical project. I realized that visualizing the space could be taken a step further, so I decided to build a 3D model to accompany the 2D floorplan. At last I decided to package all this into an easily accesable, interactive browser-based demo that requires no
+downloads and can be easily shared via a simple link.
+
+This writing documents my journey reseaching, designing, building and developing this project.
 
 # Introduction
 
