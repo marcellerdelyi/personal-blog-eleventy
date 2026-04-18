@@ -1,0 +1,110 @@
+/* Menu variables */
+:root {
+  --bar-width: 28px;
+  --bar-height: 4px;
+  --hamburger-gap: 6px;
+  --hamburger-color: #333;
+  --animation-timing: 200ms ease-in-out;
+  --hamburger-height: calc(var(--bar-height) * 3 + var(--hamburger-gap) * 2);
+
+  --overlay-bg: #FFFEF2;
+  --overlay-top: 73px;
+  --menu-link-color: #000;
+  --menu-link-hover: #E63946;
+}
+
+/* Hamburger button */
+.hamburger-menu {
+  --x-width: calc(var(--hamburger-height) * 1.41321356237);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: var(--bar-width);
+  height: var(--hamburger-height);
+  padding: 0;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+  position: relative;
+  z-index: 50;
+}
+
+.hamburger-menu::before,
+.hamburger-menu::after,
+.hamburger-menu span {
+  content: "";
+  display: block;
+  width: var(--bar-width);
+  height: var(--bar-height);
+  background-color: var(--hamburger-color);
+  border-radius: 999px;
+  transform-origin: left center;
+  transition:
+    rotate var(--animation-timing),
+    width var(--animation-timing),
+    translate var(--animation-timing),
+    opacity var(--animation-timing);
+}
+
+.hamburger-menu.is-open::before {
+  rotate: 45deg;
+  width: var(--x-width);
+  translate: 0 calc(var(--bar-height) / -2);
+}
+
+.hamburger-menu.is-open::after {
+  rotate: -45deg;
+  width: var(--x-width);
+  translate: 0 calc(var(--bar-height) / 2);
+}
+
+.hamburger-menu.is-open span {
+  opacity: 0;
+  width: 0;
+}
+
+/* Overlay menu */
+.navbar-links {
+  position: fixed;
+  top: var(--overlay-top);
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 40;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+
+  background-color: var(--overlay-bg);
+
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition:
+    opacity var(--animation-timing),
+    visibility var(--animation-timing);
+}
+
+.navbar-links.is-open {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+.navbar-links a {
+  color: var(--menu-link-color);
+  text-decoration: none;
+  font-family: Outfit, sans-serif;
+  font-size: 3rem;
+  font-weight: 700;
+  transition: color var(--animation-timing);
+}
+
+.navbar-links a:focus,
+.navbar-links a:hover {
+  color: var(--menu-link-hover);
+}

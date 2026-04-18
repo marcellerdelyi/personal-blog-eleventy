@@ -32,7 +32,7 @@ module.exports = function (eleventyConfig) {
 
   return {
 	 // Control which files Eleventy will process
-   templateFormats: ["md", "njk", "html", "liquid",],
+   templateFormats: ["md", "njk", "html", "liquid", "js"],
 
     markdownTemplateEngine: "njk",
     dataTemplateEngine: "njk",
