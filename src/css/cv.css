@@ -1,0 +1,18 @@
+:root {
+  --bar-width: 28px;
+  --bar-height: 4px;
+  --hamburger-gap: 6px;
+  --hamburger-color: #333;
+  --animation-timing: 200ms ease-in-out;
+  --hamburger-height: calc(var(--bar-height) * 3 + var(--hamburger-gap) * 2);
+
+  --overlay-bg: #FFFEF2;
+  --overlay-top: 73px;
+  --menu-link-color: #000;
+  --menu-link-hover: #E63946;
+}
+
+.cv-links {
+    list-style-type: disc;
+    margin-left: 1.5rem;
+}
