@@ -8,6 +8,7 @@ module.exports = function (eleventyConfig) {
   // Add Passthrough Copy for CSS files
   eleventyConfig.addPassthroughCopy("./src/css");
   eleventyConfig.addPassthroughCopy("src/posts");
+  eleventyConfig.addPassthroughCopy("src/images");
 
   // Watch Target for CSS directory
   eleventyConfig.addWatchTarget("./src/css");
@@ -31,7 +32,7 @@ module.exports = function (eleventyConfig) {
 
   return {
 	 // Control which files Eleventy will process
-   templateFormats: ["md", "njk", "html", "liquid",],
+   templateFormats: ["md", "njk", "html", "liquid", "js"],
 
     markdownTemplateEngine: "njk",
     dataTemplateEngine: "njk",

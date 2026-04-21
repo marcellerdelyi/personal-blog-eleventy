@@ -1,0 +1,32 @@
+.cv-links {
+    list-style-type: disc;
+    margin-left: 1.5rem;
+}
+
+.profile {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.cv-image {
+  width: auto;
+  height: auto;
+  display: flex;
+  align-items: center;
+  margin:0;
+}
+
+.content h1 {
+  font-size: 3rem;
+}
+
+.role {
+  font-weight: 600;
+}
+
+.key-info p {
+  margin: 0;
+  margin-top: 0.5rem;
+}

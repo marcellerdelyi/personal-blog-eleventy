@@ -1,17 +1,20 @@
 @import url('./reset.css');
+@import url('menu.css');
+@import url('cv.css');
+@import url('index.css');
 
 /* Defaults */
 :root {
   --font-family: "Inter", sans-serif;
-  background-color: #f9f9f9;
+  background-color: #FEFFF0;
   --max-width: 70ch;
-  --layout-spacing: max(8vh, 3rem);
-  --size-step-1: clamp(1.1875rem, 1.05rem + 0.68vw, 1.625rem);
+  /*--layout-spacing: max(8vh, 3rem);*/
+  /*--size-step-1: clamp(1.1875rem, 1.05rem + 0.68vw, 1.625rem);*/
 }
 
 /* Layout */
-
 body {
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   font-family: var(--font-family);
@@ -26,6 +29,7 @@ main > * + * {
 }
 
 main {
+  flex: 1;
   padding-left: 1vh;
   padding-right: 1vh;
 }
@@ -41,12 +45,12 @@ header {
   top: 0;
   padding-top: 2vh;
   padding-bottom: 2vh;
-  background: salmon;
+  background: #FEFFF0;;
 }
 
 .container {
   display: flex;
-  justify-content: space-between;
+  justify-content: right;
   align-items: center;
   width: min(100%, var(--max-width));
   margin-left: auto;
@@ -54,53 +58,25 @@ header {
   padding-left: 1vh;
   padding-right: 1vh;
 }
-
-.header-logo {
-  color: #ffffff;
-  font-size: 25px;
-  font-weight: 700;
-  font-style: italic;
-  text-decoration: none;
+.hero-text {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
 }
-
-/* Nav */
-
-.nav-list {
-   font-weight: bold;
-   display: flex;
-   flex-wrap: nowrap;
-   gap: var(--gap, 2em);
-}
-
-.nav-list a {
-  color: var(--clr-neutral-900);
-  display: flex;
-  text-decoration: none;
-}
-  
-.nav-list a:focus,
-.nav-list a:hover {
-  color: var(--clr-primary-400);
-  text-decoration: underline;
-}
-
-body > footer {
-  padding-top: var(--layout-spacing);
-}
-
-body > footer div {
-  border-top: 1px solid #ccc;
-  padding-top: 0.5em;
-  font-size: var(--size-step-1);
-  color: #767676;
-}
-
 footer {
+  width: 100%;
+  background-color: #2a2d34;
+  color: #ffffff;
+  margin-top: 2rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+.site-footer__copyright {
   width: min(100%, var(--max-width));
   margin-left: auto;
   margin-right: auto;
-  padding-left: 1vh;
-  padding-right: 1vh;
 }
 
 /* Typography */
@@ -109,7 +85,7 @@ footer {
   line-height: 1.2;
 }
 
-:is(h2, h3,):not(:first-child) {
+:is(h2, h3):not(:first-child) {
   margin-top: 2em;
 }
 
@@ -181,30 +157,11 @@ main a {
   font-weight: 500;
   color: rgb(245, 90, 72);
   box-shadow: 0 1.5px rgb(245, 90, 72);
-  transition-duration: 0.2;
+  transition-duration: 0.2s;
   transition-timing-function: ease;
 
 }
 
 main a:hover {
   box-shadow: 0 0px rgb(245, 90, 72);
-}
-
-.wave {
-  animation-name: wave-animation;
-  animation-duration: 2.5s;
-  animation-iteration-count: infinite;
-  transform-origin: 70% 70%;
-  display: inline-block;
-}
-
-@keyframes wave-animation {
-    0% { transform: rotate( 0.0deg) }
-   10% { transform: rotate(14.0deg) }  /* The following five values can be played with to make the waving more or less extreme */
-   20% { transform: rotate(-8.0deg) }
-   30% { transform: rotate(14.0deg) }
-   40% { transform: rotate(-4.0deg) }
-   50% { transform: rotate(10.0deg) }
-   60% { transform: rotate( 0.0deg) }  /* Reset for the last half to pause */
-  100% { transform: rotate( 0.0deg) }
 }
