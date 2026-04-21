@@ -8,6 +8,7 @@ module.exports = function (eleventyConfig) {
   // Add Passthrough Copy for CSS files
   eleventyConfig.addPassthroughCopy("./src/css");
   eleventyConfig.addPassthroughCopy("src/posts");
+  eleventyConfig.addPassthroughCopy("src/images");
 
   // Watch Target for CSS directory
   eleventyConfig.addWatchTarget("./src/css");

@@ -1,18 +1,32 @@
-:root {
-  --bar-width: 28px;
-  --bar-height: 4px;
-  --hamburger-gap: 6px;
-  --hamburger-color: #333;
-  --animation-timing: 200ms ease-in-out;
-  --hamburger-height: calc(var(--bar-height) * 3 + var(--hamburger-gap) * 2);
-
-  --overlay-bg: #FFFEF2;
-  --overlay-top: 73px;
-  --menu-link-color: #000;
-  --menu-link-hover: #E63946;
-}
-
 .cv-links {
     list-style-type: disc;
     margin-left: 1.5rem;
+}
+
+.profile {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.cv-image {
+  width: auto;
+  height: auto;
+  display: flex;
+  align-items: center;
+  margin:0;
+}
+
+.content h1 {
+  font-size: 3rem;
+}
+
+.role {
+  font-weight: 600;
+}
+
+.key-info p {
+  margin: 0;
+  margin-top: 0.5rem;
 }

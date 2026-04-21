@@ -3,12 +3,18 @@ title: Marcell Erdelyi
 layout: base.njk
 ---
 
-# {{ title }}
- <p>
-    <strong>Phone Number:</strong>+47 462 35 386<br>
-    <strong>Email:</strong> <a href="mailto:[Your Email Address]">erdelyimarcell@gmail.com</a><br>
-    <strong>Location:</strong> Steinkjer, Norway
-</p>
+<section class="profile">
+  <img class="cv-image" src="/images/Bike_Picture_Frame.png" alt="Marcell with helmet" >
+  <div class="content">
+    <h1>Marcell Erdelyi</h1>
+    <p class="role">Visualization &amp; Technical Artist</p>
+    <div class="key-info">
+      <p>Steinkjer, Norway</p>
+      <p>erdelyimarcell@gmail.com</p>
+      <p>+47 462 35 386</p>
+    </div>
+  </div>
+</section>
 
 ## About me
 
