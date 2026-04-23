@@ -1,0 +1,19 @@
+.index-profile {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+  padding-bottom: 2rem;
+}
+
+.index-content h1 {
+  font-size: 3rem;
+  margin-top: 0;
+  font-weight: 800;
+}
+
+.index-content p{
+  font-size: 1.75rem;
+  margin-top: 0;
+  font-weight: 400;
+}
