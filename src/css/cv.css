@@ -1,6 +1,10 @@
 .cv-links {
     list-style-type: disc;
-    margin-left: 1.5rem;
+    margin-inline: auto;
+    padding-inline-start: 1.5rem;
+    padding-inline-end: 1rem;
+    width: min(100%, var(--max-width));
+    padding-inline: 1rem;
 }
 
 .profile {
