@@ -27,7 +27,7 @@ For my project, Bonsai is useful because it allows me to create parametric 3D mo
 
 {% image "./Bonsai_BIM_LandingPage.jpg", "Landing page of the Blender addon Bonsai" %}
 
-# 3D scanning
+# Measuring & 3D scanning
 
 
 Before I could start modeling my appartment in Blender, I needed to collect enough real-world measurements to understand the apartment’s real size, proportions and layout.
@@ -50,7 +50,33 @@ The appartment consist of the following spaces.
 
 Entering the unit you will find 3 bedrooms to the left, first a bathroom to the right then a entrance to the pentry. Moving further in, there is the combined kitchen/Living room area, which is the largest of all the spaces.
 
-# Modelling with Bonsai
+# Model building in Bonsai
 
-In the upcoming parts of this series, I will dive deeper into each step of the process, sharing practical examples, from scanning the apartment, to building the 3D model in Blender, and finally generating the floor plan.
+BonsaiBIM is a free & open source BIM/CAD platform built on Blender.
+
+First steps, 3d scan imports to blender
+
+{% image "./Blender_Scan_import.jpg", "Scanniverse Blender imports and scan alignment" %}
+
+.blend vs .ifc
+
+Briefly about how the bonsai addon works, navigation where to find what, how to create models
+
+## What Is IFC? 
+
+Disclaimer: IFC is a complex and wide topic, so this chapter will only cover selected examples, definitions, and relations that are relevant to the scope of this project. The goal is not to provide a complete technical explanation of IFC, but rather to give enough context to support the practical work presented here. Therefore, some definitions may be simplified or generalised. 
+
+IFC-Industry Foundation Classes: an industry-developed product data model for the design and full lifecycle of buildings, supported by buildingSMART. It has broad support by most software companies; it is weakened by varied nonconsistent implementations. 
+
+## IFC classes
+
+
+### IFC Wall
+
+### IFC door
+
+### IFC Window
+
+
+
 
