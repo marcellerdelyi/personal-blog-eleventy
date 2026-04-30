@@ -17,7 +17,7 @@ With no existing plans to rely on, I took it upon myself to draft my own 2D floo
 To define how the appartment should be represented and what kind of information it should contain, my research was guided by two key aspects: how to represent the apartment virtually using 3D geometry, and how to store useful information inside that representation.
 
 ## BIM
-After doing some research, I discovered that this is a common problem faced by architects and people in the construction indusrty. The solution I found is something called Building Information Modelling, or BIM.
+After doing some research, I discovered that this is a common problem faced by people working in architecture, engineering and construction (AEC) industry. The solution I found is something called Building Information Modelling, or BIM.
 
 But what does that actually mean?
 
@@ -31,7 +31,7 @@ In other words, BIM allows you to work with both 3D models and 2D plans simultan
 
 ## Bonsai
 
-To build my BIM model, I will use a Blender add-on called Bonsai, previously known as BlenderBIM. 
+To build my modell, I will use a Blender add-on called Bonsai, previously known as BlenderBIM. 
 
 This addon allows me to create parametric 3D model elements such as walls, doors, and windows, and then use the same model to generate floor plans directly within Blender.
 
@@ -64,38 +64,48 @@ In total, I carried out two 3D scans that needed to be aligned with each other. 
 
 After that, I also went around and manually measured the walls, corners, crevices, windows, and doors myself, since I didn’t want to rely on the scan data alone.
 
-# Building BIM Modell in Bonsai
+# Understanding Bonsai BIM
 
 One of the many things I truly like about Blender is its gigantic feature and add-on ecosystem. It is on the path to becoming the standard platform for everything 3D.
 
 It is this versatility that Bonsai BIM builds upon.
 
-In the Bonsai Bim Add-on, CAD modelling works through a dedicated modelling interface that interacts with the IFC data model. IFC, short for Industry Foundation Classes, is an ISO standard that describes geometry, data, objects, processes, and relationships, in the built environment (i.e. BIM). In theory, this standard should allow for smoother information exchange between different BIM platforms. In practice, however, IFC exchange still depends heavily on how each software handles IFC import and export. Platforms such as Revit, ArchiCAD, and Tekla may support different IFC versions, export settings, model view definitions, property sets, and object mappings. Because of this, the same IFC file is not always interpreted in exactly the same way across different applications.
+In Bonsai, CAD modelling works through a dedicated modelling interface that interacts with the IFC data model. IFC, short for Industry Foundation Classes, is an ISO standard that describes geometry, data, objects, processes, and relationships, in the built environment (i.e. BIM). In theory, this standard should allow for smoother information exchange between different BIM platforms. In practice, however, IFC exchange still depends heavily on how each software handles IFC import and export. Platforms such as Revit, ArchiCAD, and Tekla may support different IFC versions, export settings, model view definitions, property sets, and object mappings. Because of this, the same IFC file is not always interpreted in exactly the same way across different applications. Therefore, file exchange is still strongly dependent on the quality and capabilities of the IFC importers and exporters in the software being used.
 
-Therefore, file exchange is still strongly dependent on the quality and capabilities of the IFC importers and exporters in the software being used.
+Bonsai BIM was designed from the ground up to tackle the complexities of real-world BIM workflows using the IFC standard. When you work with Bonsai, you are not modifying 3D geometry that will be translated to IFC later. You're working directly with IFC data starting from the beginning. Every element you create or change is a genuine IFC object with semantic meaning, metadata, relationships, and characteristics that other BIM apps recognise.recognise natively.
 
-First steps, 3d scan imports to blender
+A wall in Bonsai is more than just a 3D solid. It's an IfcWall with material properties, structural specifications, cost data, and relationships to connected elements like windows/doors, slabs, roofs or space. This is not a conversion or export, it is the actual data structure.
 
-{% image "./Blender_Scan_import.jpg", "Scanniverse Blender imports and scan alignment" %}
 
-.blend vs .ifc
-
-Briefly about how the bonsai addon works, navigation where to find what, how to create models
-
-## What Is IFC? 
-
-Disclaimer: IFC is a complex and wide topic, so this chapter will only cover selected examples, definitions, and relations that are relevant to the scope of this project. The goal is not to provide a complete technical explanation of IFC, but rather to give enough context to support the practical work presented here. Therefore, some definitions may be simplified or generalised. 
-
-IFC-Industry Foundation Classes: an industry-developed product data model for the design and full lifecycle of buildings, supported by buildingSMART. It has broad support by most software companies; it is weakened by varied nonconsistent implementations. 
 
 ## IFC classes
 
 
 ### IFC Wall
 
+loadbearing wall vs not.
+
 ### IFC door
 
 ### IFC Window
+
+### Saving IFC file
+
+In Bonsai, using **Save IFC Project** stores the BIM model as an ".ifc" file, rather than as Blender’s native ".blend" file.
+
+Regular Blender objects are therefore not automatically become part of the IFC model. For example, if I add a normal Blender mesh such as a cube or sphere, it will not be saved into the IFC file unless it is assigned or converted into an IFC element with a proper IFC class and representation.
+
+If I want to preserve Blender-specific settings, scene setup, or other non-IFC elements, I would need to save a separate `.blend` file as well.
+
+# Building the apartment in Bonsai BIM
+
+Using Bonsai purely for 3D modelling purposes is still considered a niche, but it's very possible and particularly practical for architectural and structural workflows as this will be demostrade in the upcoming section.
+
+Briefly about how the bonsai addon works, navigation where to find what, how to create models
+
+First steps, 3d scan imports to blender
+
+{% image "./Blender_Scan_import.jpg", "Scanniverse Blender imports and scan alignment" %}
 
 
 
