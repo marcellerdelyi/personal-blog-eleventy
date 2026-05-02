@@ -1,5 +1,5 @@
 ---
-title: "Using BIM inside Blender: How to build a virtual replica of your own living space"
+title: "Bonsai BIM: A case study about how to build a BIM modell of your own living space"
 description: " How to build an interactive experiences of your home using Blender and Unity"
 date: 2026-01-01
 ---
@@ -27,28 +27,30 @@ Oliver Thomas from the YouTube channel *Architect Network* gives a simple explan
 
 — Oliver Thomas, Architect Network [WHAT IS BIM AND HOW IS IT USED IN PRACTICE?](https://www.youtube.com/watch?v=Vp1r9UHNZ-c&t=571s)
 
-In other words, BIM allows you to work with both 3D models and 2D plans simultaneously. What makes BIM unique is that it lets you create a 3D model that isn’t just made up of empty solids. Each element can contain information about what it represents, whether it is a wall, column, beam, floor, or another building component. It can also include data about materials, dimensions, quantities, and other properties.
+In other words, BIM allows you to work with both threedimensionnaly as well as interact with underlying data and information simultaneously. On a BIM modell, each element can contain information about what it represents, whether it is a wall, column, beam, floor, or another building component. It can also include data about materials, dimensions, quantities, and other properties.
+
+Have to aknowledge that BIM is an inescapable buzzword these days in the practice of AEC industry. BIM is commonly reffered to as both building information modeling (the process) and building information model (the digital artifact). In this project I will use BIM to refer mainly to the modelling process, whereas for my 3D modell I will call that a BIM modell.
 
 ## Bonsai
 
-To build my modell, I will use a Blender add-on called Bonsai, previously known as BlenderBIM. 
+To build my own BIM modell for this project, I will use a Blender add-on called Bonsai, previously known as BlenderBIM. 
 
-This addon allows me to create parametric 3D model elements such as walls, doors, and windows, and then use the same model to generate floor plans directly within Blender.
+In Bonsai all the intercation is through a dedicated modelling interface that interacts with IFC data model. IFC, short for Industry Foundation Classes, is an ISO standard that describes geometry, data, objects, processes, and relationships, in the built environment (i.e. BIM). Through this interface, I can create parametric elements such as walls, doors, and windows, and also generate 2D drawings from them automatically. This means the floor plan is not created separately, like in a more traditional CAD program.
 
 {% image "./Bonsai_BIM_LandingPage.jpg", "Landing page of the Blender addon Bonsai" %}
-_BonsaiBIM is a free & open source BIM/CAD platform built on Blender [Bonsai BIM landing page](https://bonsaibim.org/)_
+**FIGURE xy** _BonsaiBIM is a free & open source BIM/CAD platform built on Blender [Check out the addon here:](https://bonsaibim.org/)_
 
 # Understanding the apartment layout
 
 {% image "./Kvennavikgata_Grid_Spaces.jpg", "rooms and spaces in the apartment" %}
 
 The appartment consist of the following spaces:
-- Hallway/entrance
-- Bathroom
-- Bedroom 1
-- Bedroom 2
-- Bedroom 3
-- Living room/kitchen
+  - Hallway/entrance
+  - Bathroom
+  - Bedroom 1
+  - Bedroom 2
+  - Bedroom 3
+  - Living room/kitchen
 
 When entering the unit, there are three bedrooms on the left-hand side. On the right-hand side, there is first the bathroom, followed by the entrance to the pantry. Moving further into the apartment, you reach the combined kitchen and living room area, which is the largest space in the unit.
 
@@ -62,32 +64,47 @@ In order to understand the existing conditions of the apartment, I used 3D scann
 
 In total, I carried out two 3D scans that needed to be aligned with each other. The quality of the scans was sufficient for the purpose of the project. Given the layout of my apartment, I didn’t need to capture every room. Scanning the living room and the bedroom furthest from the entrance gave me enough reference to work from. Later, I could draw a straight line from the outer walls of the bedroom towards the entrance at an angle, and connect that line to the entrance wall.
 
-After that, I also went around and manually measured the walls, corners, crevices, windows, and doors myself, since I didn’t want to rely on the scan data alone.
+# Building the apartment in Bonsai BIM
 
-# Understanding Bonsai BIM
+**Importing & scan alignments**
 
-One of the many things I truly like about Blender is its gigantic feature and add-on ecosystem. It is on the path to becoming the standard platform for everything 3D.
+Briefly about how the bonsai addon works, navigation where to find what, how to create models
 
-It is this versatility that Bonsai BIM builds upon.
+First steps, 3d scan imports to blender
 
-In Bonsai, CAD modelling works through a dedicated modelling interface that interacts with the IFC data model. IFC, short for Industry Foundation Classes, is an ISO standard that describes geometry, data, objects, processes, and relationships, in the built environment (i.e. BIM). In theory, this standard should allow for smoother information exchange between different BIM platforms. In practice, however, IFC exchange still depends heavily on how each software handles IFC import and export. Platforms such as Revit, ArchiCAD, and Tekla may support different IFC versions, export settings, model view definitions, property sets, and object mappings. Because of this, the same IFC file is not always interpreted in exactly the same way across different applications. Therefore, file exchange is still strongly dependent on the quality and capabilities of the IFC importers and exporters in the software being used.
-
-Bonsai BIM was designed from the ground up to tackle the complexities of real-world BIM workflows using the IFC standard. When you work with Bonsai, you are not modifying 3D geometry that will be translated to IFC later. You're working directly with IFC data starting from the beginning. Every element you create or change is a genuine IFC object with semantic meaning, metadata, relationships, and characteristics that other BIM apps recognise.recognise natively.
-
-A wall in Bonsai is more than just a 3D solid. It's an IfcWall with material properties, structural specifications, cost data, and relationships to connected elements like windows/doors, slabs, roofs or space. This is not a conversion or export, it is the actual data structure.
+{% image "./Blender_Scan_import.jpg", "Scanniverse Blender imports and scan alignment" %}
 
 
+## Walls
 
-## IFC classes
+{% image "./Wall100_Example.jpg", "Example of the type of data an IFC wall contains" %}
+
+**FIGURE xy** _An IFC wall, It is a fully editable parametric and data-rich object. Just like columns, doors, windows, beams, roofs, and foundations, is controlled by settings specific to what that element represents. A wall can contain both structural and architectural information, including graphical and numerical data. Highlighting shows how object information is presented in Bonsai BIM_
+
+### Wall types and libaries
+
+Based on the measurements and scan data, I identified three different wall types: external masonry walls, internal plaster walls used as room dividers, and unit-separating walls that separate my apartment from the neighbouring units.
+
+{% image "./Different_Wall_Thickness.jpg", "Different IFC wall thicknesses, ranging from 100 to 300 mm" %}
+**FIGURE xy** _A libary of IFC wall types_
+
+Using this data, I built a small library of IFC wall types with three different thicknesses: 300 mm, 200 mm, and 100 mm.
+
+{% image "./Colour_Coded_Walls.jpg", "Wall thickness by colour" %}
+**FIGURE xy** _Colour-coded wall types in the apartment BIM modell_
+
+| Thickness | Wall Type                             | Colour |
+|-----------|---------------------------------------|--------|
+| 300 mm    | External / masonry wall               | White  |
+| 200 mm    | Unit divider wall                     | Blue   |
+| 100 mm    | Lightweight internal plaster wall     | Green  |
 
 
-### IFC Wall
+## Openings
 
-loadbearing wall vs not.
+### Doors
 
-### IFC door
-
-### IFC Window
+### Windows
 
 ### Saving IFC file
 
@@ -97,15 +114,9 @@ Regular Blender objects are therefore not automatically become part of the IFC m
 
 If I want to preserve Blender-specific settings, scene setup, or other non-IFC elements, I would need to save a separate `.blend` file as well.
 
-# Building the apartment in Bonsai BIM
+# Drawing generation
 
-Using Bonsai purely for 3D modelling purposes is still considered a niche, but it's very possible and particularly practical for architectural and structural workflows as this will be demostrade in the upcoming section.
 
-Briefly about how the bonsai addon works, navigation where to find what, how to create models
-
-First steps, 3d scan imports to blender
-
-{% image "./Blender_Scan_import.jpg", "Scanniverse Blender imports and scan alignment" %}
 
 
 
