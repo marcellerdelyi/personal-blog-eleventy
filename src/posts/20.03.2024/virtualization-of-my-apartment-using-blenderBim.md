@@ -66,14 +66,10 @@ In total, I carried out two 3D scans that needed to be aligned with each other. 
 
 # Building the apartment in Bonsai BIM
 
-**Importing & scan alignments**
-
-Briefly about how the bonsai addon works, navigation where to find what, how to create models
-
-First steps, 3d scan imports to blender
-
 {% image "./Blender_Scan_import.jpg", "Scanniverse Blender imports and scan alignment" %}
+**FIGURE xy** _Imported Scaniverse 3D scans in Blender_
 
+The 3D scans were exported from Scaniverse as FBX files. In Blender, after resetting their origins, I needed to align the two scans. I used reference points from the door and from a shared wall that connected Bedroom 3 with the living room. The alignment was far from 100% precise, but more than good enough for the purpose of this project.
 
 ## Walls
 
@@ -91,20 +87,45 @@ Based on the measurements and scan data, I identified three different wall types
 Using this data, I built a small library of IFC wall types with three different thicknesses: 300 mm, 200 mm, and 100 mm.
 
 {% image "./Colour_Coded_Walls.jpg", "Wall thickness by colour" %}
-**FIGURE xy** _Colour-coded wall types in the apartment BIM modell_
+**FIGURE xy** _Colour-coded wall types_
 
 | Thickness | Wall Type                             | Colour |
 |-----------|---------------------------------------|--------|
 | 300 mm    | External / masonry wall               | White  |
-| 200 mm    | Unit divider wall                     | Blue   |
+| 200 mm    | Unit-separating wall                  | Blue   |
 | 100 mm    | Lightweight internal plaster wall     | Green  |
 
 
 ## Openings
 
-### Doors
+According to the [buildingSMART](https://standards.buildingsmart.org/IFC/RELEASE/IFC4_3/HTML/lexical/IfcOpeningElement.htm?utm_source=chatgpt.com) definition, an IFC opening is a BIM object that represents a void, recess, chase, or hole within a physical building element, typically used to model spaces for doors, windows, penetrations, ventilation, access, or services.
+
+In simpler terms, this means that a window opening in a wall is modelled as an IfcOpeningElement that cuts into the wall, while the actual window element fills that opening.
 
 ### Windows
+{% image "./Kvennavikgata_Coloured_Windows.jpg", "Colour coded windows by dimentions" %}
+**FIGURE xy** _Colour-coded window types_
+
+I identified only two window types. The first measured 1300 × 1100 mm and had no handles or opening function. The second measured 1225 × 1195 mm and had a handle, allowing it to open. Both used a one-sided partition type.
+
+Partitioning type describes how a window is divided into panels or sections.
+
+| Dimentions        | Partitioning Type | Can be opened? | Colour |
+|-------------------|-------------------|----------------|--------|
+| 1300 x 1100 mm    | Single sided      |       No       | Red    |
+| 1225 x 1195 mm    | Single sided      |       Yes      | Yellow |
+
+### Doors
+
+For the doors, I also identified two main types. Most of them are lightweight internal plywood doors, measuring 2140 × 980 mm. There are five of these in total: four with a right-hand swing type and one with a left-hand swing type. The entrance door is much wider (2140 x 1000 mm) and heavier, than the inner doors,and it also has a left-hand swing operation.
+
+{% image "./Kvennavikgata_Coloured_Doors.jpg", "Colour coded doors by dimentions" %}
+**FIGURE xy** _Colour-coded door types_
+
+| Dimentions        | Swing Operation Type              | Colour |
+|-------------------|-----------------------------------|--------|
+| 2140 × 980 mm     | Both left & right hand swing type | Purple |
+| 2140 x 1000 mm    | left-hand swing type              | Pink   |
 
 ### Saving IFC file
 
