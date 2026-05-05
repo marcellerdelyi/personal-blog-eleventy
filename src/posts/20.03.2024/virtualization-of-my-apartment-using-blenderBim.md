@@ -119,13 +119,15 @@ Partitioning type describes how a window is divided into panels or sections.
 
 For the doors, I also identified two main types. Most of them are lightweight internal plywood doors, measuring 2140 × 980 mm. There are five of these in total: four with a right-hand swing type and one with a left-hand swing type. The entrance door is much wider (2140 x 1000 mm) and heavier, than the inner doors,and it also has a left-hand swing operation.
 
-{% image "./Kvennavikgata_Coloured_Doors.jpg", "Colour coded doors by dimentions" %}
+{% image "./Kvennavikgata_Coloured_Doors_v02.jpg", "Colour coded doors by dimentions" %}
 **FIGURE xy** _Colour-coded door types_
 
 | Dimentions        | Swing Operation Type              | Colour |
 |-------------------|-----------------------------------|--------|
 | 2140 × 980 mm     | Both left & right hand swing type | Purple |
 | 2140 x 1000 mm    | left-hand swing type              | Pink   |
+
+![Top technical drawing of the front door](../Door_Top_Drawing.svg)
 
 ### Saving IFC file
 
