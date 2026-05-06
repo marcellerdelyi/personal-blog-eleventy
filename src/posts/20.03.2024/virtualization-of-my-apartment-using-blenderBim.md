@@ -127,7 +127,37 @@ For the doors, I also identified two main types. Most of them are lightweight in
 | 2140 × 980 mm     | Both left & right hand swing type | Purple |
 | 2140 x 1000 mm    | left-hand swing type              | Pink   |
 
+Below is an illustration of the main entrance door swing. Door swing indicates the direction a door opens and which side it hinges from.
+
 ![Top technical drawing of the front door](../Door_Top_Drawing.svg)
+**FIGURE xy** _Top-view view example of a single door swing_
+
+# Drawing generation
+
+In a traditional CAD workflow, the floor plan is often drawn manually as 2D lines.
+
+In Bonsai, the workflow is different. The model comes first, and the drawing is generated from it. For a floor plan, Bonsai cuts through the model at a set height and turns the visible elements into 2D linework. Dimensions, labels, tags, and symbols can then be added on top.
+
+This means the drawing is more like an output of the model rather than a separate file that has to be maintained by hand. If something changes, the better approach is to update the model, drawing settings, or annotations, and then regenerate the drawing.
+
+## Drawing Pipeline in Bonsai
+
+The pipeline for drawing generation in Bonsai is as follows:
+
+**Model**  
+↓  
+**Defined view or section**  
+↓  
+**Generated 2D vector geometry**  
+↓  
+**Annotations**  
+↓  
+**Styled SVG drawing**  
+↓  
+**Sheet layout / output**
+
+The main advantage is that the drawing stays connected to the model, instead of becoming a separate set of lines that has to be manually kept in sync.
+
 
 ### Saving IFC file
 
@@ -136,8 +166,6 @@ In Bonsai, using **Save IFC Project** stores the BIM model as an ".ifc" file, ra
 Regular Blender objects are therefore not automatically become part of the IFC model. For example, if I add a normal Blender mesh such as a cube or sphere, it will not be saved into the IFC file unless it is assigned or converted into an IFC element with a proper IFC class and representation.
 
 If I want to preserve Blender-specific settings, scene setup, or other non-IFC elements, I would need to save a separate `.blend` file as well.
-
-# Drawing generation
 
 
 
