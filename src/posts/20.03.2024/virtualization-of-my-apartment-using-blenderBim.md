@@ -6,6 +6,9 @@ date: 2026-01-01
 
 An exploration project that focuses on how to build, edit and maintain a digital, virual copy of my own living space, and how this model can be easily.
 
+{% image "./Kvennavikgata_Building_Block.jpg", "Thumbnail, hero image, showing the sorrunding area of the appartment location" %}
+
+
 # Background
 
 In the spring of 2024, in preparation for a future sale, I decided to try and dig up a layout for my apartment unit. To my surprise, I discovered that no official drawings existed for the building. Built in the 1950s, originally as a convenience store, and later turned into an apartment complex that was renovated in 2014, my apartment lacked any formal construction or renovation documentation. This is rather strange considering I live in Norway, a country known for strict regulations nowadays ,but it seems regulations were much more lenient back in the 50s. Strangely, very little documentation follows the 2014 renovation either, which should have had paperwork in place to legally carry out upgrades to the dwellings. This was before my time owning the property. After speaking with neighbors, I learned that any existing plans were likely lost; they were hand-drawn by a local architect who held the last known copies of the building's blueprints and passed away some time ago.
@@ -71,6 +74,14 @@ In total, I carried out two 3D scans that needed to be aligned with each other. 
 
 The 3D scans were exported from Scaniverse as FBX files. In Blender, after resetting their origins, I needed to align the two scans. I used reference points from the door and from a shared wall that connected Bedroom 3 with the living room. The alignment was far from 100% precise, but more than good enough for the purpose of this project.
 
+**Saving files: `.Ifc` vs. `.blend`**
+
+In Bonsai, when you save a project, you use `Save IFC Project`, which stores the BIM model as an `.ifc` file rather than Blender’s native `.blend` file.
+
+Regular Blender objects therefore do not automatically become part of the IFC model. For example, if I add a normal Blender mesh such as a cube or sphere, it will not be saved into the IFC file unless it is assigned or converted into an IFC element with a proper IFC class and representation.
+
+Therefore, if I also want to keep any non-ifc-compatible objects in my scene, such as my 3D scans for this project, I need to save a separate `.blend` file as well.
+
 ## Walls
 
 {% image "./Wall100_Example.jpg", "Example of the type of data an IFC wall contains" %}
@@ -132,15 +143,15 @@ Below is an illustration of the main entrance door swing. Door swing indicates t
 ![Top technical drawing of the front door](../Door_Top_Drawing.svg)
 **FIGURE xy** _Top-view view example of a single door swing_
 
-# Drawing generation
+# Understanding drawing generation
 
 In a traditional CAD workflow, the floor plan is often drawn manually as 2D lines.
 
 In Bonsai, the workflow is different. The model comes first, and the drawing is generated from it. For a floor plan, Bonsai cuts through the model at a set height and turns the visible elements into 2D linework. Dimensions, labels, tags, and symbols can then be added on top.
 
-This means the drawing is more like an output of the model rather than a separate file that has to be maintained by hand. If something changes, the better approach is to update the model, drawing settings, or annotations, and then regenerate the drawing.
+This means the drawing stays connected to the model, instead of becoming a separate set of 2D lines that has to be maintained by hand. If something changes you only need to update the modell, drawing settings, or annotations, and then regenerate the drawing.
 
-## Drawing Pipeline in Bonsai
+## Drawing generation pipeline in Bonsai
 
 The pipeline for drawing generation in Bonsai is as follows:
 
@@ -156,16 +167,9 @@ The pipeline for drawing generation in Bonsai is as follows:
 ↓  
 **Sheet layout / output**
 
-The main advantage is that the drawing stays connected to the model, instead of becoming a separate set of lines that has to be manually kept in sync.
+# Drawing generation
 
 
-### Saving IFC file
-
-In Bonsai, using **Save IFC Project** stores the BIM model as an ".ifc" file, rather than as Blender’s native ".blend" file.
-
-Regular Blender objects are therefore not automatically become part of the IFC model. For example, if I add a normal Blender mesh such as a cube or sphere, it will not be saved into the IFC file unless it is assigned or converted into an IFC element with a proper IFC class and representation.
-
-If I want to preserve Blender-specific settings, scene setup, or other non-IFC elements, I would need to save a separate `.blend` file as well.
 
 
 
