@@ -45,15 +45,17 @@ In Bonsai all the intercation is through a dedicated modelling interface that in
 
 # Understanding the apartment layout
 
+The apartment is a 3 bedroom, first floor apartment with a combined kitchen/living room space and one large bathroom, with a total of 74 m² usable area.
+
 {% image "./Kvennavikgata_Grid_Spaces.jpg", "rooms and spaces in the apartment" %}
 
-The appartment consist of the following spaces:
-  - Hallway/entrance
-  - Bathroom
-  - Bedroom 1
-  - Bedroom 2
-  - Bedroom 3
-  - Living room/kitchen
+Here is a list of all available spaces:
+  - **Hallway/entrance**
+  - **Bathroom**
+  - **Bedroom 1**
+  - **Bedroom 2**
+  - **Bedroom 3**
+  - **Living room/kitchen**
 
 When entering the unit, there are three bedrooms on the left-hand side. On the right-hand side, there is first the bathroom, followed by the entrance to the pantry. Moving further into the apartment, you reach the combined kitchen and living room area, which is the largest space in the unit.
 
