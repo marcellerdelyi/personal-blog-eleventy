@@ -1,34 +1,37 @@
 ---
-title: "Bonsai BIM: A case study about how to build a BIM modell of your own living space"
+title: "Bonsai BIM: A case study of building a BIM modell of your own living space in Blender"
 description: " How to build an interactive experiences of your home using Blender and Unity"
-date: 2026-01-01
+date: 2026-06-01
 ---
 
-An exploration project that focuses on how to build, edit and maintain a digital, virual copy of my own living space, and how this model can be easily.
+A personal case study project in which I used the Blender addon bonsai to reconstruct my apartment as a BIM modell, using data from 3D scanning and other measurement techniques to build a data-rich 3D model capable of generating an on-demand floorplan.
 
 {% image "./Kvennavikgata_Building_Block.jpg", "Thumbnail, hero image, showing the sorrunding area of the appartment location" %}
 
 
 # Background
 
-In the spring of 2024, in preparation for a future sale, I decided to try and dig up a layout for my apartment unit. To my surprise, I discovered that no official drawings existed for the building. Built in the 1950s, originally as a convenience store, and later turned into an apartment complex that was renovated in 2014, my apartment lacked any formal construction or renovation documentation. This is rather strange considering I live in Norway, a country known for strict regulations nowadays ,but it seems regulations were much more lenient back in the 50s. Strangely, very little documentation follows the 2014 renovation either, which should have had paperwork in place to legally carry out upgrades to the dwellings. This was before my time owning the property. After speaking with neighbors, I learned that any existing plans were likely lost; they were hand-drawn by a local architect who held the last known copies of the building's blueprints and passed away some time ago.
+In the spring of 2024, in preparation for a future sale, I decided to search for a floor plan for my apartment unit. To my surprise, I could not find any plans or records for the property. Before it became an apartment complex, the building was used as a convenience store in the 1950s. It was converted in 2014, before I owned the property. After speaking with neighbors, I learned that any existing plans were likely lost, as the company that renovated the complex declared bankruptcy in 2017, and some of the drawings went with them, including the one for my apartment.
 
-With no existing plans to rely on, I took it upon myself to draft my own 2D floor plan. I myself not an architect, or someone with experiance from the "traditional" construction industry ,but I'm certainly not entiriley clueless either. I work with visualisation of offshore steel struktures in my day-to-day job, so the concept of reading construction manual PDFs and understanding and working with technical CAD drawings and detailed fabrication 3D models are not a foreign concept for me. I work heavily with 3D models ,but also thats how my brain is wired, can much easily understand complicated concepot in a 3D space, so I decided to investigatge how I can turn a 3D model to a 2D floorplan and vis a virsa, on demapnd, whenenver I need one or the other. Therefore my first real challenge was figuring out how to combine these two formats without doubling the work. Creating a separate 2D plan and 3D model would mean updating both every time something changed, which felt inefficient and easy to get wrong. Instead, I wanted one true source that could represent the visual geometry while also containing information like wall thickness, doors, and window parameters, which I could then turn into a 2D drawing.
+With no existing drawings to rely on, I decided to draft my own. I don't have a degree in architecture or engineering ,but I am not completely unfamiliar with this type of work either. 
+My day-to-day job involves the visualisation of offshore steel structures, so understanding construction drawings and detailed 3D modells are not strange concepts to me. 
 
-# Research & BIM
+Since I work a lot with 3D, I also find it easier to understand spaces through a 3D modell than only through a 2D drawing. Because of this, I wanted to explore how I could create both a 3D modell and a 2D floor plan without doing the work twice.
 
-To define how the appartment should be represented and what kind of information it should contain, my research was guided by two key aspects: how to represent the apartment virtually using 3D geometry, and how to store useful information inside that representation.
+# Research
+
+My research for this project was guided by two key aspects: how to represent the apartment in a 3D modell that can also be used to generate a 2D floor plan automatically, or with minimal modification, when needed.
 
 ## BIM
 After doing some research, I discovered that this is a common problem faced by people working in architecture, engineering and construction (AEC) industry. The solution I found is something called Building Information Modelling, or BIM.
 
 But what does that actually mean?
 
-Oliver Thomas from the YouTube channel *Architect Network* gives a simple explanation of BIM:
+Oliver Thomas from the YouTube channel [ArchiTech Network](https://www.youtube.com/@architech.network) gives a simple explanation of BIM:
 
 *"Bim is really just a 3D modell and the moment it becomes a BIM modell is when the geometry itself is not just a meaningless shape ,but it is packed full of data, and information inside the modell"*
 
-— Oliver Thomas, Architect Network [WHAT IS BIM AND HOW IS IT USED IN PRACTICE?](https://www.youtube.com/watch?v=Vp1r9UHNZ-c&t=571s)
+— Oliver Thomas, ArchiTech Network [WHAT IS BIM AND HOW IS IT USED IN PRACTICE?](https://www.youtube.com/watch?v=Vp1r9UHNZ-c&t=571s)
 
 In other words, BIM allows you to work with both threedimensionnaly as well as interact with underlying data and information simultaneously. On a BIM modell, each element can contain information about what it represents, whether it is a wall, column, beam, floor, or another building component. It can also include data about materials, dimensions, quantities, and other properties.
 
@@ -57,7 +60,7 @@ Here is a list of all available spaces:
   - **Bedroom 3**
   - **Living room/kitchen**
 
-When entering the unit, there are three bedrooms on the left-hand side. On the right-hand side, there is first the bathroom, followed by the entrance to the pantry. Moving further into the apartment, you reach the combined kitchen and living room area, which is the largest space in the unit.
+When entering the unit, there are three bedrooms on the left-hand side. On the right-hand side, there is first the bathroom, followed by the pantry. Moving further into the apartment, you reach the combined kitchen and living room area, which is the largest space in the unit.
 
 # Measuring & 3D scanning
 
@@ -147,34 +150,32 @@ Below is an illustration of the main entrance door swing. Door swing indicates t
 
 # Understanding drawing generation
 
-In a traditional CAD workflow, the floor plan is often drawn manually as 2D lines.
+In a traditional CAD workflow, the drawing often comes first. An architectural plan or floor plan is created as 2D linework, from which any 3D representation can be generated later on.
 
-In Bonsai, the workflow is different. The model comes first, and the drawing is generated from it. For a floor plan, Bonsai cuts through the model at a set height and turns the visible elements into 2D linework. Dimensions, labels, tags, and symbols can then be added on top.
+In Bonsai, the workflow is different. The drawings are generated directly from IFC BIM model. Bonsai does this by cutting through the 3D modell at a set height and turning the visible elements into 2D linework. Dimensions, labels, tags, and symbols can then be added on top.
 
-This means the drawing stays connected to the model, instead of becoming a separate set of 2D lines that has to be maintained by hand. If something changes you only need to update the modell, drawing settings, or annotations, and then regenerate the drawing.
+The 2D drawings are connected to the 3D modell and can be viewed together, instead of living separately as a set of 2D lines that has to be maintained by hand. If something changes, you only need to update the model, drawing settings, or annotations, and then regenerate the drawing.
 
-## Drawing generation pipeline in Bonsai
+IFC drawings can come in many forms, fulfilling different functions.
 
-The pipeline for drawing generation in Bonsai is as follows:
+- **Architectural IFC drawings:** These drawings contain floor plans, elevation plans, section plans, facade plans, and cladding plans.
 
-**Model**  
-↓  
-**Defined view or section**  
-↓  
-**Generated 2D vector geometry**  
-↓  
-**Annotations**  
-↓  
-**Styled SVG drawing**  
-↓  
-**Sheet layout / output**
+- **Structural IFC drawings:** These drawings contain plans for beams, columns, foundations, and other structural elements. They are important for the stability and safety of the building.
 
-# Drawing generation
+- **MEP IFC drawings:** MEP stands for Mechanical, Electrical, and Plumbing. These drawings include electrical schematics, plumbing plans, and HVAC layouts. Their main function is to describe the building services that provide comfort and functionality for the inhabitants.
 
+In this project, I focus only on architectural IFC drawings.
 
+## Drawing generation in Bonsai
 
+Simplified drawing generation pipeline in Bonsai, showing how a modell view is converted into 2D vector drawings:
 
+{% image "./Bonsai Drawing Generation Pipeline.jpg", "Diagram of drawing generation pipeline" %}
+**FIGURE xy** _Diagram of drawing generation pipeline in Bonsai_
 
+# Acknowledgement
+
+I would like to thank my friend and former colleague [Isak J. Bråthen](https://www.linkedin.com/in/isak-br%C3%A5then-21a041186/) for his ongoing efforts to teach me Blender-related skills for the past 5 years. For this project specifically, he provided assistance to the 3D scanning, showed me how to use the [BlenderGIS](https://github.com/domlysz/BlenderGIS) addon, how to create a height-based colour mask using Blender's shader editor, how to render [cryptomatte](https://docs.blender.org/manual/en/latest/compositing/types/mask/cryptomatte.html) to create a mask for compositing for the thumbanail image, and some sick Miro tricks.
 
 
 
