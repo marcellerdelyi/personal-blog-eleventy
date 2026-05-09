@@ -1,20 +1,20 @@
 ---
 title: "Bonsai BIM: A case study of building a BIM model of your own living space in Blender"
-description: " How to build an interactive experiences of your home using Blender and Unity"
+description: "A case study of rebuilding my apartment as a BIM model in Blender using Bonsai, 3D scanning, manual measurements, and IFC-based drawing generation."
 date: 2026-06-01
 ---
 
 A personal case study project in which I used the Blender addon bonsai to reconstruct my apartment as a BIM model, using data from 3D scanning and other measurement techniques to build a data-rich 3D model capable of generating an on-demand floorplan.
 
-{% image "./Kvennavikgata_Building_Block.jpg", "Thumbnail, hero image, showing the sorrunding area of the apartment location" %}
+{% image "./Kvennavikgata_Building_Block.jpg", "Thumbnail, hero image, showing the surrounding area of the apartment location" %}
 
 
 # Background
 
 In the spring of 2024, in preparation for a future sale, I decided to search for a floor plan for my apartment unit, but to my surprise, I could not find any plans or records.
-Before it became an apartment complex, the building was used as a convenience store in the 1950s. It was converted in 2014, which was before my time I owned the property. After speaking with neighbors, I learned that any existing plans were likely lost, as the company that renovated the complex declared bankruptcy in 2017, and some of the drawings went with them, including the one for my apartment.
+Before it became an apartment complex, the building was used as a convenience store in the 1950s. It was converted in 2014, which was before I owned the property. After speaking with neighbors, I learned that any existing plans were likely lost, as the company that renovated the complex declared bankruptcy in 2017, and some of the drawings went with them, including the one for my apartment.
 
-With no existing drawings to rely on, I decided to create my own. I don't have a degree in architecture or engineering ,but I am not completely unfamiliar with this type of work either. My day-to-day job involves the visualisation of offshore steel structures, so understanding construction drawings and detailed 3D models are not strange concepts to me. 
+With no existing drawings to rely on, I decided to create my own. I don't have a degree in architecture or engineering, but I am not completely unfamiliar with this type of work either. My day-to-day job involves the visualisation of offshore steel structures, so understanding construction drawings and detailed 3D models are not strange concepts to me. 
 
 Since I work a lot with 3D, I also find it easier to understand spaces through a 3D model than only through a 2D drawing. Because of this, I wanted to explore how I could create both a 3D model and a 2D floor plan without doing the work twice.
 
@@ -42,7 +42,7 @@ I think many have to admit that BIM has become an unavoidable buzzword these day
 
 To build my own BIM model for this project, I will use a Blender add-on called Bonsai, previously known as BlenderBIM. 
 
-In Bonsai all the intercation is through a dedicated modelling interface that interacts with IFC data model. IFC, short for Industry Foundation Classes, is an ISO standard that describes geometry, data, objects, processes, and relationships, in the built environment (i.e. BIM). Through this interface, I can create parametric elements such as walls, doors, and windows, and also generate 2D drawings from them automatically. This means the floor plan is not drafted separately as independent 2D linework, as in a conventional 2D CAD workflow.
+In Bonsai all the interaction is through a dedicated modelling interface that interacts with IFC data model. IFC, short for Industry Foundation Classes, is an ISO standard that describes geometry, data, objects, processes, and relationships, in the built environment (i.e. BIM). Through this interface, I can create parametric elements such as walls, doors, and windows, and also generate 2D drawings from them automatically. This means the floor plan is not drafted separately as independent 2D linework, as in a conventional 2D CAD workflow.
 
 {% image "./Bonsai_BIM_LandingPage.jpg", "Landing page of the Blender addon Bonsai" %}
 **FIGURE 1** _BonsaiBIM is a free & open source BIM/CAD platform built on Blender [Check out the addon here:](https://bonsaibim.org/)_
@@ -95,13 +95,13 @@ Therefore, if I also want to keep any non-ifc-compatible objects in my scene, su
 
 ## Walls
 
-An IFC wall, It is a fully editable parametric and data-rich object. Just like columns, doors, windows, beams, roofs, and foundations, is controlled by settings specific to what that element represents. A wall can contain both structural and architectural information, including graphical and numerical data. Highlighting shows how object information is presented in Bonsai BIM
+In Bonsai, an IFC wall is a fully editable parametric and data-rich object. Just like columns, doors, windows, beams, roofs, and foundations, is controlled by settings specific to what that element represents. A wall can contain both structural and architectural information, including graphical and numerical data. Highlighting shows how object information is presented in Bonsai BIM
 
 {% image "./Wall100_Example.jpg", "Example of the type of data an IFC wall contains" %}
 
 **FIGURE 5** _An example of an IFC wall_
 
-### Wall types and libaries
+### Wall types and libraries
 
 Based on the measurements and scan data, I identified three different wall types: **external masonry walls**, **internal plaster walls** used as room dividers, and **unit-separating walls** that separate my apartment from the neighbouring units.
 
@@ -128,10 +128,10 @@ According to the [buildingSMART](https://standards.buildingsmart.org/IFC/RELEASE
 
 I identified only two window types. The first measured 1300 × 1100 mm and had no handles or opening function. The second measured 1225 × 1195 mm and had a handle, allowing it to open. Both used a one-sided partition type. Partitioning type describes how a window is divided into panels or sections.
 
-{% image "./Kvennavikgata_Coloured_Windows.jpg", "Colour coded windows by dimentions" %}
-**FIGURE xy** _Colour-coded window types_
+{% image "./Kvennavikgata_Coloured_Windows.jpg", "Colour coded windows by Dimensions" %}
+**FIGURE 8** _Colour-coded window types_
 
-| Dimentions        | Partitioning Type | Can be opened? | Colour |
+| Dimensions        | Partitioning Type | Can be opened? | Colour |
 |-------------------|-------------------|----------------|--------|
 | 1300 x 1100 mm    | Single sided      |       No       | Red    |
 | 1225 x 1195 mm    | Single sided      |       Yes      | Yellow |
@@ -140,10 +140,10 @@ I identified only two window types. The first measured 1300 × 1100 mm and had n
 
 For the doors, I also identified two main types. Most of them are lightweight internal plywood doors, measuring 2140 × 980 mm. There are five of these in total: four with a right-hand swing type and one with a left-hand swing type. The entrance door is much wider (2140 x 1000 mm) and heavier, than the inner doors,and it also has a left-hand swing operation.
 
-{% image "./Kvennavikgata_Coloured_Doors_v02.jpg", "Colour coded doors by dimentions" %}
-**FIGURE xy** _Colour-coded door types_
+{% image "./Kvennavikgata_Coloured_Doors_v02.jpg", "Colour coded doors by Dimensions" %}
+**FIGURE 9** _Colour-coded door types_
 
-| Dimentions        | Swing Operation Type              | Colour |
+| Dimensions        | Swing Operation Type              | Colour |
 |-------------------|-----------------------------------|--------|
 | 2140 × 980 mm     | Both left & right hand swing type | Purple |
 | 2140 x 1000 mm    | left-hand swing type              | Pink   |
@@ -151,17 +151,17 @@ For the doors, I also identified two main types. Most of them are lightweight in
 Below is an illustration of the main entrance door swing. Door swing indicates the direction a door opens and which side it hinges from.
 
 ![Top technical drawing of the front door](../Door_Top_Drawing.svg)
-**FIGURE xy** _Top-view view example of a single door swing_
+**FIGURE 10** _Top-view view example of a single door swing_
 
 # Understanding drawing generation
 
-In a traditional CAD workflow, the drawing often comes first. An architectural plan or floor plan is created as 2D linework, from which any 3D representation can be generated later on.
+In many traditional 2D CAD workflows, the drawing often comes first. An architectural plan or floor plan is created as 2D linework, from which any 3D representation can be generated later on.
 
 In Bonsai, the workflow is different. The drawings are generated directly from IFC BIM model. Bonsai does this by cutting through the 3D model at a set height and turning the visible elements into 2D linework. Dimensions, labels, tags, and symbols can then be added on top.
 
 The 2D drawings are connected to the 3D model and can be viewed together, instead of living separately as a set of 2D lines that has to be maintained by hand. If something changes, you only need to update the model, drawing settings, or annotations, and then regenerate the drawing.
 
-IFC drawings can come in many forms, fulfilling different functions.
+Drawings generated from an IFC model can come in many forms, fulfilling different functions.
 
 - **Architectural IFC drawings:** These drawings contain floor plans, elevation plans, section plans, facade plans, and cladding plans.
 
@@ -176,14 +176,22 @@ In this project, I focus only on architectural IFC drawings.
 Simplified drawing generation pipeline in Bonsai, showing how a model view is converted into 2D vector drawings:
 
 {% image "./Bonsai Drawing Generation Pipeline.jpg", "Diagram of drawing generation pipeline" %}
-**FIGURE xy** _Diagram of drawing generation pipeline in Bonsai_
+**FIGURE 11** _Diagram of drawing generation pipeline in Bonsai_
+
+{% image "./Floor_Plan_Creation.jpg", "The drawing creation menu inside Bonsai" %}
+**FIGURE 12** _The drawing creation menu inside Bonsai_
+
+In Bonsai, the drawing generation tools live under the **1., Drawings and Documents** menu. Once the camera is **2., adjusted**, you can press **3., Create Drawing** to generate the floor plan from your active camera view.
 
 ## The floor plan
 
+For the floor plan, I didn’t need an extreme level of detail, just enough to show the room sizes and the overall layout. I plan to add furniture and more details in the future, but that goes beyond the scope of this article.
+
+![Kvennavikgata Floor Plan](../PLAN_VIEW.svg)
 
 # Acknowledgement
 
-I would like to thank my friend and former colleague [Isak J. Bråthen](https://www.linkedin.com/in/isak-br%C3%A5then-21a041186/) for his ongoing efforts to teach me Blender-related skills for the past 5 years. For this project specifically, he provided assistance to the 3D scanning, showed me how to use the [BlenderGIS](https://github.com/domlysz/BlenderGIS) addon, how to create a height-based colour mask using Blender's shader editor, how to render [cryptomatte](https://docs.blender.org/manual/en/latest/compositing/types/mask/cryptomatte.html) to create a mask for compositing for the thumbanail image, and some sick Miro tricks.
+I would like to thank my friend and former colleague [Isak J. Bråthen](https://www.linkedin.com/in/isak-br%C3%A5then-21a041186/) for his ongoing efforts to teach me Blender-related skills for the past 5 years. For this project specifically, he provided assistance to the 3D scanning, showed me how to use the [BlenderGIS](https://github.com/domlysz/BlenderGIS) addon, how to create a height-based colour mask using Blender's shader editor, how to render [cryptomatte](https://docs.blender.org/manual/en/latest/compositing/types/mask/cryptomatte.html) to create a mask for compositing for the thumbnail image, and some sick Miro tricks.
 
 
 
