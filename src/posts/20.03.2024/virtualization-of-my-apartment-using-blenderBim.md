@@ -161,16 +161,6 @@ In Bonsai, the workflow is different. The drawings are generated directly from I
 
 The 2D drawings are connected to the 3D model and can be viewed together, instead of living separately as a set of 2D lines that has to be maintained by hand. If something changes, you only need to update the model, drawing settings, or annotations, and then regenerate the drawing.
 
-Drawings generated from an IFC model can come in many forms, fulfilling different functions.
-
-- **Architectural IFC drawings:** These drawings contain floor plans, elevation plans, section plans, facade plans, and cladding plans.
-
-- **Structural IFC drawings:** These drawings contain plans for beams, columns, foundations, and other structural elements. They are important for the stability and safety of the building.
-
-- **MEP IFC drawings:** MEP stands for Mechanical, Electrical, and Plumbing. These drawings include electrical schematics, plumbing plans, and HVAC layouts. Their main function is to describe the building services that provide comfort and functionality for the inhabitants.
-
-In this project, I focus only on architectural IFC drawings.
-
 ## Drawing generation in Bonsai
 
 Simplified drawing generation pipeline in Bonsai, showing how a model view is converted into 2D vector drawings:
