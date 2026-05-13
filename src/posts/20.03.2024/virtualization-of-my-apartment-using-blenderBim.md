@@ -240,11 +240,22 @@ From here, I continued by organising the scene, grouping layers together, and cr
 
 With the cleanup finished, I moved over to Photoshop to do some final compositing. I rendered out a clay render from Blender and used it as an overlay on top of the Freestyle illustration to add shadows. Finally, I added a gradient layer to turn the black lines into a light blue colour, giving the image this “blueprint” style.
 
-{% image "./Kvennavikgata_Freestyle_Rendering.jpg", "Kvennavikgata Freestyle rendering" %}
+{% image "./Kvennavikgata_Freestyle_Lines_Illustrator.jpg", "Kvennavikgata Freestyle rendering" %}
 **FIGURE 16** _Freestyle rendering after Photoshop tweaking_
 
-{% image "./Kvennavikgata_Freestyle_Rendering_Blueprint.jpg", "Kvennavikgata Freestyle rendering" %}
+{% image "./Kvennavikgata_Freestyle_Rendering_Blueprint_v02.jpg", "Kvennavikgata Freestyle rendering" %}
 **FIGURE 17** _Freestyle rendering after Photoshop tweaking with some tinted blue colour_
+
+## Architecture plan
+
+In addition to the original floor plan exported from Bonsai, I wanted to create a version that was not only functional, but also more pleasing to look at. The goal was to make something that felt more suitable for a presentation or portfolio, compared to the original unedited drawing.
+
+I used the same SVG floor plan as a starting point. From there, I brought it into Illustrator and added text, a background, patterns, and colour to the flooring to create a clearer visual hierarchy. For the patterns, I created one line hatch for the flooring and one tile pattern for the bathroom.
+
+After that, I made some finishing touches in Photoshop. One of these was adding an extra inner stroke to the walls using the Layer Style menu.
+
+{% image "./PLAN_VIEW.jpg", "Architecture plan made in Illustrator, Photoshop" %}
+**FIGURE 18** _Architecture plan made in Illustrator, Photoshop_
 
 # Acknowledgement
 
