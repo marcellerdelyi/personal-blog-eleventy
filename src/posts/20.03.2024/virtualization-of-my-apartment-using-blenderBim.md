@@ -1,7 +1,7 @@
 ---
 title: "Bonsai BIM: A case study of building a BIM model of your own living space in Blender"
 description: "A case study of rebuilding my apartment as a BIM model in Blender using Bonsai, 3D scanning, manual measurements, and IFC-based drawing generation."
-date: 2026-06-01
+date: 2026-05-14
 ---
 
 A personal case study project in which I used the Blender addon bonsai to reconstruct my apartment as a BIM model, using data from 3D scanning and other measurement techniques to build a data-rich 3D model capable of generating an on-demand floorplan.
@@ -70,7 +70,7 @@ When entering the unit, there are three bedrooms on the left-hand side. On the r
 
 Before I could start modelling my apartment in Blender, I needed to collect enough real-world measurements to understand the apartment’s real size, proportions and layout.
 
-I used 3D scanning together with manual measurements taken with a laser meter and measuring tape. For the scanning, I didn’t need anything too fancy, just something that could capture data accurately enough for this purpose. A colleague of mine recommended Scaniverse, a 3D scanning app for iPhones and iPads that uses LiDAR and photogrammetry. I don’t own any Apple products capable of running the app, but luckily I was able to borrow an iPad from work.
+I used 3D scanning together with manual measurements taken with a laser meter and measuring tape. For the scanning, I didn’t need anything too fancy, just something that could capture data accurately enough for this purpose. A colleague of mine recommended [Scaniverse](https://apps.apple.com/us/app/scaniverse-3d-scanner/id1541433223), a 3D scanning app for iPhones and iPads that uses LiDAR and photogrammetry. I don’t own any Apple products capable of running the app, but luckily I was able to borrow an iPad from work.
 
 {% image "./Measuring_Dialog.jpg", "measurement tools and methods" %}
 **FIGURE 3** _Images from the measuring process_
@@ -87,7 +87,7 @@ The 3D scans were exported from Scaniverse as FBX files. In Blender, after reset
 
 ## Saving files: `.Ifc` vs. `.blend`
 
-In Bonsai, when you save a project, you use `Save IFC Project`, which stores the BIM model as an `.ifc` file rather than Blender’s native `.blend` file.
+In Bonsai, when you save a project, you use **Save IFC Project**, which stores the BIM model as an `.ifc` file rather than Blender’s native `.blend` file.
 
 Regular Blender objects therefore do not automatically become part of the IFC model. For example, if I add a normal Blender mesh such as a cube or sphere, it will not be saved into the IFC file unless it is assigned or converted into an IFC element with a proper IFC class and representation.
 
@@ -252,16 +252,17 @@ In addition to the original floor plan exported from Bonsai, I wanted to create 
 
 I used the same SVG floor plan as a starting point. From there, I brought it into Illustrator and added text, a background, patterns, and colour to the flooring to create a clearer visual hierarchy. For the patterns, I created one line hatch for the flooring and one tile pattern for the bathroom.
 
-After that, I made some finishing touches in Photoshop. One of these was adding an extra inner stroke to the walls using the Layer Style menu.
+After that, I made some finishing touches in Photoshop. One of these was adding an extra inner stroke to the walls using the Layer Style menu, which helped the wall outlines stand out more clearly.
 
 {% image "./PLAN_VIEW.jpg", "Architecture plan made in Illustrator, Photoshop" %}
 **FIGURE 18** _Architecture plan made in Illustrator, Photoshop_
 
 # Acknowledgement
 
-I would like to thank my friend and former colleague [Isak J. Bråthen](https://www.linkedin.com/in/isak-br%C3%A5then-21a041186/) for his ongoing efforts to teach me Blender-related skills for the past 5 years. For this project specifically, he provided assistance to the 3D scanning, showed me how to use the [BlenderGIS](https://github.com/domlysz/BlenderGIS) addon, how to create a height-based colour mask using Blender's shader editor, how to render [cryptomatte](https://docs.blender.org/manual/en/latest/compositing/types/mask/cryptomatte.html) to create a mask for compositing for the thumbnail image, and some sick Miro tricks.
+I would like to thank my friend and former colleague [Isak J. Bråthen](https://www.linkedin.com/in/isak-br%C3%A5then-21a041186/) for his ongoing efforts to teach me Blender-related skills for the past 5 years. For this project specifically, he provided assistance to the 3D scanning, showed me how to use the [BlenderGIS](https://github.com/domlysz/BlenderGIS) addon, how to make a height-based colour mask using Blender's shader editor, how to render [cryptomatte](https://docs.blender.org/manual/en/latest/compositing/types/mask/cryptomatte.html) masks, which make it easier to isolate specific objects or materials during compositing, and some sick Miro tricks.
 
-### Want to reach out? lets have a [chat](mailto:erdelyimarcell@gmail.com)!
+# Want to have a chat? Let’s [connect!](mailto:erdelyimarcell@gmail.com)
+
 
 
 
