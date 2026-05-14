@@ -1,6 +1,6 @@
 ---
 title: "Bonsai BIM: A case study of building a BIM model of your own living space in Blender"
-description: "A case study of rebuilding my apartment as a BIM model in Blender using Bonsai, 3D scanning, manual measurements, and IFC-based drawing generation."
+description: "A case study of rebuilding my apartment as a BIM model in Blender using Bonsai, 3D scanning, manual measurements."
 date: 2026-05-14
 ---
 
