@@ -1,5 +1,5 @@
 ---
-title: "Bonsai BIM: A case study of building a BIM model of your own living space in Blender"
+title: "Bonsai: A case study of how I built a BIM model of my apartment using Blender"
 description: "A case study of rebuilding my apartment as a BIM model in Blender using Bonsai, 3D scanning, manual measurements."
 date: 2026-05-14
 ---
@@ -77,7 +77,7 @@ I used 3D scanning together with manual measurements taken with a laser meter an
 
 In total, I carried out two 3D scans that needed to be aligned with each other. The quality of the scans was sufficient for the purpose of the project. Given the layout of my apartment, I didn’t need to capture every room. Scanning the living room and the bedroom furthest from the entrance gave me enough reference to work from.
 
-# Building the apartment in Bonsai BIM
+# Building the apartment in Bonsai
 
 The 3D scans were exported from Scaniverse as FBX files. In Blender, after resetting their origins, I needed to align the two scans. I used reference points from the door and from a shared wall that connected Bedroom 3 with the living room. The alignment was far from 100% precise, but more than good enough for the purpose of this project.
 
@@ -95,7 +95,7 @@ Therefore, if I also want to keep any non-ifc-compatible objects in my scene, su
 
 ## Walls
 
-In Bonsai, an IFC wall is a fully editable parametric and data-rich object. Just like columns, doors, windows, beams, roofs, and foundations, is controlled by settings specific to what that element represents. A wall can contain both structural and architectural information, including graphical and numerical data. Highlighting shows how object information is presented in Bonsai BIM
+In Bonsai, an IFC wall is a fully editable parametric and data-rich object. Just like columns, doors, windows, beams, roofs, and foundations, is controlled by settings specific to what that element represents. A wall can contain both structural and architectural information, including graphical and numerical data. Highlighting shows how object information is presented in Bonsai.
 
 {% image "./Wall100_Example.jpg", "Example of the type of data an IFC wall contains" %}
 
@@ -231,7 +231,7 @@ I proceeded to render my image, and saved the output by adding the **.svg** exte
 
 With the saved SVG file, it was time to do some cleanup work in illustration. Passing the image through Illustrator is optional, but there is a good chance that the Freestyle output will produce lines that are not exactly how you want them. The lines can be very thick, sometimes causing the drawing to lose detail. A complex and detailed model can also create too much line detail, resulting in what I like to call “black blobs.” 
 
-{% image "./Freestyle_Rendering_errors.jpg", "image showing the different rendering errors freestyle can produce" %}
+{% image "./Freestyle_Rendering_errors_v02.jpg", "image showing the different rendering errors freestyle can produce" %}
 **FIGURE 15** _Freestyle rendering errors_
 
 In Illustrator, I started by lowering the line weight to 0.75 px.
