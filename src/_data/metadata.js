@@ -1,11 +1,11 @@
 module.exports = {
-	title: "Marcell Erdelyi Website",
-	url: "https://example.com/",
+	title: "Marcell Erdélyi Website",
+	url: "https://marcellerdelyi.com/",
 	language: "en",
-	description: "Example description",
+	description: "The personal website and portfolio of Marcell Erdélyi.",
 	author: {
-		name: "Your Name Here",
-		email: "youremailaddress@example.com",
-		url: "https://example.com"
+		name: "Marcell Erdélyi",
+		email: "erdelyimarcell@gmail.com",
+		url: "https://marcellerdelyi.com/"
 	}
 }

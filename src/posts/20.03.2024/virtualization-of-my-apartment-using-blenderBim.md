@@ -119,7 +119,6 @@ Using this data, I built a small library of IFC wall types with three different 
 | 200 mm    | Unit-separating wall                  | Blue   |
 | 100 mm    | Lightweight internal plaster wall     | Green  |
 
-
 ## Openings
 
 According to the [buildingSMART](https://standards.buildingsmart.org/IFC/RELEASE/IFC4_3/HTML/lexical/IfcOpeningElement.htm?utm_source=chatgpt.com) definition, an IFC opening is a BIM object that represents a void, recess, chase, or hole within a physical building element, typically used to model spaces for doors, windows, penetrations, ventilation, access, or services.
@@ -131,10 +130,10 @@ I identified only two window types. The first measured 1300 × 1100 mm and had n
 {% image "./Kvennavikgata_Coloured_Windows.jpg", "Colour coded windows by Dimensions" %}
 **FIGURE 8** _Colour-coded window types_
 
-| Dimensions        | Partitioning Type | Can be opened? | Colour |
-|-------------------|-------------------|----------------|--------|
-| 1300 x 1100 mm    | Single sided      |       No       | Red    |
-| 1225 x 1195 mm    | Single sided      |       Yes      | Yellow |
+| Dimensions        | Can be opened? | Colour |
+|-------------------|----------------|--------|
+| 1300 x 1100 mm    |       No       | Red    |
+| 1225 x 1195 mm    |       Yes      | Yellow |
 
 ### Doors
 
