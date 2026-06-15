@@ -5,43 +5,48 @@ const pluginImages = require("./eleventy.config.images.js");
 //const { config } = require("dotenv");
 
 module.exports = function (eleventyConfig) {
-  // Add Passthrough Copy for CSS files
-  eleventyConfig.addPassthroughCopy("./src/css");
-  eleventyConfig.addPassthroughCopy("src/posts");
-  eleventyConfig.addPassthroughCopy("src/images");
+	// Add Passthrough Copy for CSS files
+	eleventyConfig.addPassthroughCopy("./src/css");
+	eleventyConfig.addPassthroughCopy("src/posts");
+	eleventyConfig.addPassthroughCopy("src/images");
 
-  // Watch Target for CSS directory
-  eleventyConfig.addWatchTarget("./src/css");
+	// Watch Target for CSS directory
+	eleventyConfig.addWatchTarget("./src/css");
 
-  // Watch content images for the image pipeline.
+	// Watch content images for the image pipeline.
 	eleventyConfig.addWatchTarget("content/**/*.{svg,webp,png,jpeg,gif}");
 
+	// FILTERS - Modify data in template files at build time
+	// Converts dates from JSDate format (Fri Dec 02 18:00:00 GMT-0600) to a locale format. https://11ty.rocks/eleventyjs/dates/
+	eleventyConfig.addFilter("postDate", (dateObj) => {
+		return DateTime.fromJSDate(dateObj).toLocaleString(DateTime.DATE_MED);
+	});
+	eleventyConfig.addCollection("recentPosts", function (collectionApi) {
+		return collectionApi
+			.getFilteredByTag("post")
+			.filter((post) => {
+				return post.data.published !== false && post.data.noindex !== true;
+			})
+			.reverse()
+			.slice(0, 3);
+	});
 
-  // FILTERS - Modify data in template files at build time
-  // Converts dates from JSDate format (Fri Dec 02 18:00:00 GMT-0600) to a locale format. https://11ty.rocks/eleventyjs/dates/
-  eleventyConfig.addFilter("postDate", (dateObj) => {
-    return DateTime.fromJSDate(dateObj).toLocaleString(DateTime.DATE_MED);
-  });
-  eleventyConfig.addCollection("recentPosts", function(collectionApi) {
-    return collectionApi.getFilteredByGlob("./src/posts/**/*.md").reverse().slice(0, 3);
-  });
+	// Syntax Highlighting Plugin
+	eleventyConfig.addPlugin(pluginSyntaxHighlight);
+	eleventyConfig.addPlugin(pluginImages);
 
-  // Syntax Highlighting Plugin
-  eleventyConfig.addPlugin(pluginSyntaxHighlight);
-  eleventyConfig.addPlugin(pluginImages);
+	return {
+		// Control which files Eleventy will process
+		templateFormats: ["md", "njk", "html", "liquid", "js"],
 
-  return {
-	 // Control which files Eleventy will process
-   templateFormats: ["md", "njk", "html", "liquid", "js"],
+		markdownTemplateEngine: "njk",
+		dataTemplateEngine: "njk",
+		htmlTemplateEngine: "njk",
 
-    markdownTemplateEngine: "njk",
-    dataTemplateEngine: "njk",
-    htmlTemplateEngine: "njk",
-
-      dir: {
-          input: "src",
-          output: "_site",
-          data: "_data",     
-      },
-  };
+		dir: {
+			input: "src",
+			output: "_site",
+			data: "_data",
+		},
+	};
 };
