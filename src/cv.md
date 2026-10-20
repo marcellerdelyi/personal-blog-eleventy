@@ -90,6 +90,18 @@ Sep 2017 – May 2018
 
 ## Volunteer Experience
 ---
+
+**Trondheim Developers Conference (TDC) - Volunteer**
+_Trondheim, Trøndelag, Norway_  
+Oct 2026
+
+Volunteered at TDC Trondheim 2026 as part of an incredible team of volunteers, helping ensure a safe and enjoyable experience for everyone attending the conference.
+
+My main responsibility was coordinating participant feedback after each talk, including distributing voting chips, collecting and counting votes, and submitting the results through electronic forms.
+
+Other responsibilities included welcoming and guiding participants, assisting speakers and partners.
+
+**International Students' Union of Norway (ISU)**
 The International Students' Union of Norway (ISU) is a nationwide organization representing international students. Over three years, while I was studying, I managed organizational tasks and general communications, including funding applications. My other responsibilities included organizing local elections, planning events, and representing the local branch at national meetings.
 
 **President (ISU Steinkjer)**  
