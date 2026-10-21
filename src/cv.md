@@ -21,6 +21,7 @@ layout: base.njk
 I love turning complex, engineering-heavy procedures into clear, usable visuals. My work includes technical assembly and operational animations, product renderings, real-time product demos for large-scale offshore platforms in Unreal Engine, and VR prototypes. I bridge engineering and other disciplines to improve understanding and collaboration, with experience in project ownership, pipeline development, version control, and data-driven workflows.
 
 ## Work Experience
+
 ---
 
 **AkerSolutions - Visualization Engineer**  
@@ -28,6 +29,7 @@ _Verdal, Trøndelag, Norway_
 Sep 2021 – Present
 
 Part of the Verdal visualization team, responsible for delivering technical assembly and operational animation videos directly to engineering. Contributed to establishing and transitioning production workflows to Unreal Engine for real-time rendering.
+
 <ul class="cv-links">
     <li> Prepared, optimized 3D assets in Blender and Unreal Engine, including modeling, optimization, rigging, animation, and texturing of vehicles, vessels, cranes, O&G jackets and topsides, buildings, and production halls.</li>
     <li> Main responsible for 3D asset and animation delivery for Digital Yard projects in Unreal Engine, supporting frequently changing schedules.</li>
@@ -44,6 +46,7 @@ Part of the Verdal visualization team, responsible for delivering technical asse
 **AkerSolutions - Summer Internship**  
 _Verdal, Trøndelag, Norway_  
 Jun 2021 – Aug 2021
+
 <ul class="cv-links">
     <li>During my summer internship at Aker Solutions,  I primarily focused on asset preparation, rigging, and creating animations for a promotional video highlighting the company's new high-tech robotic facility, the Verdal Production Line (VPL). The VPL project is one of the largest development in the company’s history.</li>
 </ul>
@@ -51,6 +54,7 @@ Jun 2021 – Aug 2021
 **AkerSolutions - School Internship**  
 _Verdal, Trøndelag, Norway_  
 Jan 2021 – May 2021
+
 <ul class="cv-links">
     <li>I was part of Nord University's school internship program, which allowed me to spend several months gaining on-site experience at the company. During this period, I learned rigging and animation within Unreal Engine with a primarily focus on researching and prototyping procedural animations. The program resulted in an offer to continue as a summer intern after I finished my studies.</li>
 </ul>
@@ -58,24 +62,27 @@ Jan 2021 – May 2021
 **Nord University - Teacher Assistant**  
 _Levanger, Trøndelag, Norway_  
 Sep 2020 – Dec 2020
+
 <ul class="cv-links">
     <li>Taught design and graphics for the first-year Film and TV course, delivering weekly lessons to approximately 20 students throughout the first semester.</li>
 </ul>
 
 **Smart Media - Summer Internship**  
 _Steinkjer, Trøndelag, Norway_  
-Apr 2019 – Jul 2019  
+Apr 2019 – Jul 2019
 
 <ul class="cv-links">
     <li> spent several months as a school intern at Smartmedia, a local company in Steinkjer specializing in marketing, strategy, design, and web development. During my time there, I gained hands-on experience designing and developing websites, exploring how to deliver digital products and content using framework models such as the Core Model ("Kjernemodellen"). Additionally, I was given an independent project to design and prototype an interactive floor plan using Unity. </li>
 </ul>
 
 ## Education
+
 ---
 
 **Nord University**  
 _Steinkjer, Trøndelag, Norway_  
 Aug 2018 – Jun 2021
+
 <ul class="cv-links">
     <li>Bachelor's Degree in 3D Art, Animation & VFX.</li>
     <li>BA thesis: "Procedural animation of an industrial robot",  combined research and real-world testing conducted during an internship at Aker Solutions. The project developed and proposed a workflow for creating a fully procedural animated robotic arm for virtual industrial environments.</li>
@@ -84,24 +91,28 @@ Aug 2018 – Jun 2021
 **Mesharray Digital Media School**  
 _Budapest, Hungary_  
 Sep 2017 – May 2018
+
 <ul class="cv-links">
     <li>I completed two semesters of study in 3D Visualization, earning a Autodesk software certification.</li>
 </ul>
 
 ## Volunteer Experience
+
 ---
 
-**Trondheim Developers Conference (TDC) - Volunteer**
+**Trondheim Developers Conference (TDC) - Volunteer**  
 _Trondheim, Trøndelag, Norway_  
 Oct 2026
 
 Volunteered at TDC Trondheim 2026 as part of an incredible team of volunteers, helping ensure a safe and enjoyable experience for everyone attending the conference.
 
-My main responsibility was coordinating participant feedback after each talk, including distributing voting chips, collecting and counting votes, and submitting the results through electronic forms.
-
-Other responsibilities included welcoming and guiding participants, assisting speakers and partners.
+<ul class="cv-links">
+    <li>My main responsibility was coordinating participant feedback after each talk, including distributing voting chips, collecting and counting votes, and submitting the results through electronic forms.</li>
+    <li>Other responsibilities included welcoming and guiding participants, assisting speakers and partners.</li>
+</ul>
 
 **International Students' Union of Norway (ISU)**
+
 The International Students' Union of Norway (ISU) is a nationwide organization representing international students. Over three years, while I was studying, I managed organizational tasks and general communications, including funding applications. My other responsibilities included organizing local elections, planning events, and representing the local branch at national meetings.
 
 **President (ISU Steinkjer)**  
@@ -117,6 +128,7 @@ _Steinkjer, Trøndelag, Norway_
 Aug 2018 – Aug 2019
 
 ## Side Projects
+
 ---
 
 - **personal website**
@@ -124,7 +136,9 @@ Aug 2018 – Aug 2019
 <p><a href="https://github.com/marcellerdelyi/personal-blog-eleventy">marcellerdelyi.com</a><p\>
 
 ## Language
+
 ---
+
 <ul class="cv-links">
     <li>English: Fluent</li>
     <li>Norwegian: Intermediate</li>
