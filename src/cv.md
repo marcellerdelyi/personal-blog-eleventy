@@ -18,30 +18,47 @@ layout: base.njk
 
 ## About me
 
-I love turning complex, engineering-heavy procedures into clear, usable visuals. My work includes technical assembly and operational animations, product renderings, real-time product demos for large-scale offshore platforms in Unreal Engine, and VR prototypes. I bridge engineering and other disciplines to improve understanding and collaboration, with experience in project ownership, pipeline development, version control, and data-driven workflows.
+I help teams explain complex designs and procedures through 3D animation and interactive visualization. I enjoy finding a clear way to show how parts fit together, how equipment works, or how to carry out a task step by step.
+
+I also help teams simplify production workflows by automating repetitive tasks and making shared assets easier to manage. In web development, I help shape and test interfaces, coordinate development, and plan the hosting and backend that digital services need to run securely and reliably.
 
 ## Work Experience
 
 ---
 
-**AkerSolutions - Visualization Engineer**  
-_Verdal, Trøndelag, Norway_  
-Sep 2021 – Present
+**Northspace AS - Co-owner**  
+_Steinkjer, Trøndelag, Norway_  
+Sep 2026 – Present
 
-Part of the Verdal visualization team, responsible for delivering technical assembly and operational animation videos directly to engineering. Contributed to establishing and transitioning production workflows to Unreal Engine for real-time rendering.
+My business partners and I are developing NorthSpaceForge, a collection of web tools for the Minecraft community. I help design the interface, test new features, and coordinate development. As a co-owner, I also contribute to financial planning and the day-to-day running of the company.
 
 <ul class="cv-links">
-    <li> Prepared, optimized 3D assets in Blender and Unreal Engine, including modeling, optimization, rigging, animation, and texturing of vehicles, vessels, cranes, O&G jackets and topsides, buildings, and production halls.</li>
-    <li> Main responsible for 3D asset and animation delivery for Digital Yard projects in Unreal Engine, supporting frequently changing schedules.</li>
-    <li> Established and documented pipelines for transferring assets, rigs, and animations between Blender and Unreal Engine.</li>
-    <li> Assisted in setting up Perforce backend infrastructure on both Linux and Windows servers, and helped define version control workflows. </li>
-    <li> Wrote technical documentation to help standardize and document visualization workflows across the team.</li>
-    <li> Produced post-production content from live-action footage, including color correction, grading, and motion graphics in After Effects.</li>
-    <li> Worked remotely for six months with the Visioneering office in Stavanger as project responsible for operational, modification, and maintenance animations using 3ds Max and Chaos Vantage</li>
-    <li> Produced V-Ray still renderings for external clients, primarily for marketing purposes</li>
-    <li> Worked part-time as a fabrication engineer, preparing topside fabrication models in AutoCAD with dimensions, welding, and steel processing details</li>
-    <li> Actively seeking workflow improvements through automation using Python and MEL.</li>
+    <li>We’re preparing to redesign our first local client’s website and connect it to a partner’s ticketing service. We aim to deliver the first version in December 2026.</li>
+    <li>For our first local client’s website redesign, I’m responsible for planning the hosting setup and preparing the backend so the site runs securely and reliably in production. We aim to deliver the first version in December 2026.</li>
 </ul>
+
+**AkerSolutions - Visualization Engineer**  
+_Verdal, Trøndelag, Norway_  
+Sep 2021 – Aug 2026
+
+I worked with internal and external engineering teams to turn engineering CAD models
+into 3D animations and renderings showing how offshore structures are assembled
+and how platform systems operate. Alongside production, I helped develop our
+asset and animation pipelines and move rendering workflows into game engines
+for real-time visualization.
+
+<ul class="cv-links">
+    <li>  Produced step-by-step 3D assembly animations to supplement fabrication manuals for offshore oil and gas (O&G) projects, deployed in major North Sea fields. (Jackdaw, Sunrise, East Anglia Three, Valhall PWP, Fenris, Hugin-A, Hugin-B, BalWin 1)</li>
+    <li> Established Perforce version control for the visualization team, configured Linux and Windows servers and defined how the team tracked changes to shared project files</li>
+    <li>Helped develop an Unreal Engine digital twin demo to visualize planned activities at the fabrication yard. Supported the workflows for bringing 3D assets, rigs, and animations into the engine.</li>
+    <li>Prepared CAD models and work packages for fabrication, reviewed design documentation, and added dimensions and weld annotations.</li>
+    <li>Delivered animations showing operations on active oil and gas platforms with the Stavanger Visioneering team. Coordinated technical feedback and delivery with Aker Solutions teams and external partners, including Equinor and SLB Capturi.</li>
+    <li> Wrote scripts to automate daily tasks and improve productivity.</li>
+    <li>Wrote Python scripts to automate recurring production tasks (model cleanups, animations, rendering and compositing etc.) and helped document standard workflows for the visualization team.</li>
+</ul>
+
+**Additional production work** · Promotional renderings, motion graphics,
+film post-production, image processing, and VR demos.
 
 **AkerSolutions - Summer Internship**  
 _Verdal, Trøndelag, Norway_  
@@ -127,20 +144,12 @@ Sep 2019 – Jul 2020
 _Steinkjer, Trøndelag, Norway_  
 Aug 2018 – Aug 2019
 
-## Side Projects
-
----
-
-- **personal website**
-
-<p><a href="https://github.com/marcellerdelyi/personal-blog-eleventy">marcellerdelyi.com</a><p\>
-
 ## Language
 
 ---
 
 <ul class="cv-links">
-    <li>English: Fluent</li>
-    <li>Norwegian: Intermediate</li>
-    <li>Hungarian: Native</li>
+    <li>English - Professional working proficiency spoken and written</li>
+    <li>Norwegian - Professional working proficiency spoken and written</li>
+    <li>Hungarian - Native speaker</li>
 </ul>
