@@ -22,7 +22,7 @@ My involvement with the conference started on a hot summer day while I was on ho
 {% image "./TDC_Frivilllig_Linkedin.jpg", "Linkedin post, where Roar, the author was looking for volunteers" %}
 _📸 Roar V. Skjønberg, one of TDC’s committee members, posted a call for volunteers.[ Source Linkedin](https://www.linkedin.com/posts/roarskjonberg_techfratrondheim-frivillig-nettverk-share-7462253037558874112-Ege-/?highlightedUpdateUrn=urn%3Ali%3Aactivity%3A7462253038796181505&highlightedUpdateType=SOCIAL_SHARE&origin=SOCIAL_SHARE&utm_source=share&utm_medium=member_desktop&rcm=ACoAACtAH6EBnJqcU0WoLP_7jMiZExAiinW24M8)_
 
-Translating words like "trivelig" into English is a bit tricky. Even after living in this beautiful country for the past eight years, I still have plenty to learn, haha.
+> Note: Translating words like "trivelig" into English is a bit tricky. Even after living in this beautiful country for the past eight years, I still have plenty to learn, haha.
 
 But anyhow, I’d been wanting to get to know the tech community in Trondheim a little better. Living in a small place like Steinkjer meant I didn’t often get the chance to meet people there, though I might be calling Trondheim home before long. 😉
 Here was a chance to meet people who share my interests, learn something new, and help make the conference happen. So joining as a volunteer sounded like a no-brainer to me, so I stepped a little outside my comfort zone and sent in an application!
@@ -32,9 +32,9 @@ And oh my, was I excited when I got an email in September saying that I’d been
 {% image "./TDC_Acceptence_Letter.jpg", "Accaptance e-mail from the TDC committee" %}
 _📸 Acceptance e-mail from the TDC committee_
 
-Our first meetup was a week before the conference. We got an introduction to the organisation, how it’s funded, and the work that goes into making the event happen.
+Our first meetup was a week before the conference. We got an introductory presentation about the the organisation, how TDC is funded, and the work that goes into making the event happen.
 
-I hadn’t realised that the committee members do all of this for free too. Finding speakers, coordinating partners(sponsors), recruiting us and other helpers, all of this takes months of planning.
+I hadn’t realised (up until this point) that the committee members do all of this for free too. Finding speakers, coordinating partners (sponsors), recruiting us and other helpers. All of this takes months of planning.
 
 We also learned how TDC supports smaller tech events and activities in Trondheim. Any surplus that the conference makes goes back into supporting the local tech community, helping to fund meetups and other gatherings throughout the year. The remaining money goes back to finance next year’s TDC.
 
@@ -46,7 +46,7 @@ _📸 Me, pretty happy with my new look and no longer able to hide my excitement
 We met once more on Sunday, just a day before TDC, right on location at the Clarion conference Hotel in Trondheim to familiarise ourselves with the place and find our way around. We also briefly went through the schedule and got our shirts and conference tickets. We wrapped up the meetup with great conversations and even more pizza. Everything was now in place for the big day!
 
 {% image "./20261019_072310.jpg", "Early morning sun on Monday, 19 October" %}
-_📸 Early morning sun on Monday, 19 October! (The sunset photo I originally wanted to use here turned out too dark, unfortunately)_
+_📸 Early morning sun on Monday, 19 October! (I originally wanted to show you the sunset, but my photo of it turned out too dark, so I went with this morning shot instead.)_
 
 # TDC 2026
 
@@ -118,4 +118,4 @@ There’s a human side to all of this that’s easy to overlook. We spend so muc
 
 People need other people. I think events like this, and the number of volunteers they attract, show that we haven’t forgotten that!
 
-All in all, I had so much fun, and I’d happily do TDC again next year! 🐤
+All in all, I had so much fun, and I’d happily do TDC again next year! (quack)🐤

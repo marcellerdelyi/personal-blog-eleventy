@@ -182,3 +182,13 @@ main a {
 main a:hover {
 	box-shadow: 0 0px rgb(245, 90, 72);
 }
+
+/* quotes special styling */
+
+blockquote {
+	background-color: #feff9c;
+	box-shadow: 0 1px 1px rgba(82, 173, 200, 0.25);
+	font-size: 0.8em !important;
+	border-radius: 4px;
+	padding: 0.5rem 1.5rem;
+}

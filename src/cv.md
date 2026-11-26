@@ -18,9 +18,12 @@ layout: base.njk
 
 ## About me
 
-I help teams explain complex designs and procedures through 3D animation and interactive visualization. I enjoy finding a clear way to show how parts fit together, how equipment works, or how to carry out a task step by step.
+I’ve always been curious about how things work, and on multidisciplinary teams I’m usually the guy who helps figure out what we need to make and then helps make it. Most of my work alongside engineers has involved turning CAD models into 3D animations that show how offshore oil and gas platforms are assembled and operated.
 
-I also help teams simplify production workflows by automating repetitive tasks and making shared assets easier to manage. In web development, I help shape and test interfaces, coordinate development, and plan the hosting and backend that digital services need to run securely and reliably.
+I’ve also made some pretty renders, built VR prototypes and real-time demos of large-scale platforms, and worked on production pipelines, writing code and looking after servers.
+
+**Tools I use**
+AutoCAD, Navisworks, Blender, 3ds Max, Unreal Engine, Adobe Creative Suite, Python, Microsoft Excel, and Linux and Windows servers.
 
 ## Work Experience
 
@@ -53,7 +56,6 @@ for real-time visualization.
     <li>Helped develop an Unreal Engine digital twin demo to visualize planned activities at the fabrication yard. Supported the workflows for bringing 3D assets, rigs, and animations into the engine.</li>
     <li>Prepared CAD models and work packages for fabrication, reviewed design documentation, and added dimensions and weld annotations.</li>
     <li>Delivered animations showing operations on active oil and gas platforms with the Stavanger Visioneering team. Coordinated technical feedback and delivery with Aker Solutions teams and external partners, including Equinor and SLB Capturi.</li>
-    <li> Wrote scripts to automate daily tasks and improve productivity.</li>
     <li>Wrote Python scripts to automate recurring production tasks (model cleanups, animations, rendering and compositing etc.) and helped document standard workflows for the visualization team.</li>
 </ul>
 
