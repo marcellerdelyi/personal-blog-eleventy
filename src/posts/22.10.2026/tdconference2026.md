@@ -88,12 +88,12 @@ The results still ended up online, though. After each talk, we counted the chips
 {% image "./55603283418_ef9a0d7aec_o.jpg", "Crowd at the Stands area" %}
 _📸 Photos by LYKT © by the TDC Committee - Crowd mingling at the stands area_
 
-AI came up a lot at TDC, and I enjoyed hearing about the practical ways people were using it in their work. My favourite talk, though, was about a bug in the AtB app: Christian Breivik’s “AtB-appen låser seg”.
+AI came up a lot at TDC, and I enjoyed hearing about the practical ways people were using it in their work. My favourite talk, though, was about a bug in the AtB app: Christian Brevik’s “AtB-appen låser seg”.
 
 In about 20 minutes, Christian walked us through a problem with AtB, one of Norway’s largest bus apps, that affected just 0.02% of its users. Funnily enough, the fix itself was quite simple. But in tracking it down, they’d also managed to squeeze a lot more performance out of the app. A pretty nice side effect of fixing a bug!
 
-{% image "./20261019_124056.jpg", "My favourite talk from Christian Breivik “AtB-appen låser sega" %}
-_📸 My favourite talk from Christian Breivik “AtB-appen låser seg"_
+{% image "./20261019_124056.jpg", "My favourite talk from Christian Brevik “AtB-appen låser sega" %}
+_📸 My favourite talk from Christian Brevik “AtB-appen låser seg"_
 
 The only real downside I heard people mention about the talks was a bit of FOMO. With several sessions running at once, catching one talk often meant missing another.
 
@@ -108,7 +108,7 @@ _📸 Photos by LYKT © by the TDC Committee - All the volunteers that made TDC 
 
 # Takeaways
 
-I enjoyed hearing the stories behind the work at TDC. Christian Breivik’s talk about a bug in the AtB app stuck with me. The next time I run into a bug as a user, I’ll probably think twice before calling it an easy fix.
+I enjoyed hearing the stories behind the work at TDC. Christian Brevik’s talk about a bug in the AtB app stuck with me. The next time I run into a bug as a user, I’ll probably think twice before calling it an easy fix.
 
 I also really enjoyed being part of the community around the conference. Everyone was so nice, patient, and genuinely interesting to talk to. Some of those conversations have already turned into LinkedIn exchanges and follow-ups that I’m still working through as I write this!
 

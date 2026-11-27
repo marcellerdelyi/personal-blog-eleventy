@@ -33,11 +33,11 @@ AutoCAD, Navisworks, Blender, 3ds Max, Unreal Engine, Adobe Creative Suite, Pyth
 _Steinkjer, Trøndelag, Norway_  
 Sep 2026 – Present
 
-My business partners and I are developing NorthSpaceForge, a collection of web tools for the Minecraft community. I help design the interface, test new features, and coordinate development. As a co-owner, I also contribute to financial planning and the day-to-day running of the company.
+My business partners and I are developing Northspace AS. The company develops and operates web portals, software and other digital products. It also produces and sells 3D models, provides IT consulting, design and development services, and carries out other related business activities. I help mainly with co-developing and designing the web interfaces, testing new features, and doing backend-related work. As a co-owner, I also contribute to financial planning and the day-to-day running of the company.
 
 <ul class="cv-links">
-    <li>We’re preparing to redesign our first local client’s website and connect it to a partner’s ticketing service. We aim to deliver the first version in December 2026.</li>
-    <li>For our first local client’s website redesign, I’m responsible for planning the hosting setup and preparing the backend so the site runs securely and reliably in production. We aim to deliver the first version in December 2026.</li>
+    <li>We’re preparing to redesign our first local client’s website and connect it to a partner’s ticketing service.</li>
+    <li>I’m responsible for planning the hosting setup and preparing the backend so the site runs securely and reliably in production. We aim to deliver the first version in December 2026.</li>
 </ul>
 
 **AkerSolutions - Visualization Engineer**  
